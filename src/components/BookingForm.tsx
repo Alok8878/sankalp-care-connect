@@ -91,17 +91,33 @@ const BookingForm = () => {
 
     setIsSubmitting(true);
 
+    // WhatsApp auto-send integration
+    const whatsappMessage = `🏥 *NEW BOOKING - Sankalp Pathology Lab*
+
+👤 Name: ${formData.fullName}
+📱 Mobile: ${formData.mobile}
+📧 Email: ${formData.email}
+🔬 Test: ${formData.testPackage}
+📅 Date: ${formData.preferredDate}
+⏰ Time: ${formData.preferredTime}
+👨‍⚕️ Doctor: ${formData.doctorName || 'Not specified'}
+📍 Address: ${formData.address || 'Lab Visit'}
+📝 Notes: ${formData.notes || 'None'}`;
+
+    // Auto-open WhatsApp with message
+    const whatsappURL = `https://wa.me/917024832751?text=${encodeURIComponent(whatsappMessage)}`;
+    
     // Simulate form submission
     await new Promise(resolve => setTimeout(resolve, 2000));
 
+    // Open WhatsApp after successful form submission
+    window.open(whatsappURL, '_blank');
+
     toast({
       title: "Booking Confirmed!",
-      description: "Your test booking has been confirmed. You'll receive a confirmation email shortly.",
+      description: "Your booking details have been sent via WhatsApp. You'll receive a confirmation soon.",
     });
 
-    // Note: For email automation, user needs to connect to Supabase
-    console.log("Booking submitted:", formData);
-    
     // Reset form
     setFormData({
       fullName: "",
@@ -325,9 +341,9 @@ const BookingForm = () => {
                       <Button 
                         variant="link" 
                         className="p-0 h-auto text-primary"
-                        onClick={() => window.open("tel:+919876543210", "_self")}
+                        onClick={() => window.open("tel:+917024832751", "_self")}
                       >
-                        +91 9876543210
+                        +91 7024832751
                       </Button>
                     </div>
                   </div>

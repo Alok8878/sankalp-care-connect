@@ -38,12 +38,14 @@ const Footer = () => {
           {/* Lab Info */}
           <div className="space-y-4">
             <div className="flex items-center space-x-3">
-              <div className="w-10 h-10 bg-white/20 rounded-lg flex items-center justify-center text-white font-bold text-xl">
-                S
-              </div>
+              <img 
+                src="/lovable-uploads/c47ab05b-5664-47f9-8a07-68af5b3c3433.png" 
+                alt="Sankalp Pathology Lab Logo" 
+                className="w-12 h-12 rounded-lg bg-white/20 p-2"
+              />
               <div>
                 <h3 className="text-xl font-bold">Sankalp Pathology Lab</h3>
-                <p className="text-sm opacity-90">Trusted Healthcare Partner</p>
+                <p className="text-sm opacity-90">स्वास्थ्य ही संकल्प है...</p>
               </div>
             </div>
             <p className="text-white/80 leading-relaxed">
@@ -109,19 +111,19 @@ const Footer = () => {
               <div className="flex items-center space-x-2">
                 <Phone className="h-4 w-4 text-white/60" />
                 <button
-                  onClick={() => window.open("tel:+919876543210", "_self")}
+                  onClick={() => window.open("tel:+917024832751", "_self")}
                   className="text-white/80 hover:text-white transition-colors"
                 >
-                  +91 9876543210
+                  +91 7024832751
                 </button>
               </div>
               <div className="flex items-center space-x-2">
                 <Mail className="h-4 w-4 text-white/60" />
                 <button
-                  onClick={() => window.open("mailto:info@sankalplab.com", "_self")}
+                  onClick={() => window.open("mailto:sankalppathologylab@gmail.com", "_self")}
                   className="text-white/80 hover:text-white transition-colors"
                 >
-                  info@sankalplab.com
+                  sankalppathologylab@gmail.com
                 </button>
               </div>
             </div>

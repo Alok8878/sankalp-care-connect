@@ -90,7 +90,7 @@ const HealthPackages = () => {
           {packages.map((pkg, index) => (
             <Card 
               key={index} 
-              className={`p-6 relative hover:shadow-xl transition-all duration-300 hover:-translate-y-2 ${
+              className={`package-card p-6 relative hover:shadow-xl transition-all duration-300 hover:-translate-y-2 stagger-item ${
                 pkg.popular 
                   ? "bg-white border-2 border-primary shadow-lg" 
                   : "bg-white/90 backdrop-blur-sm"
@@ -98,7 +98,7 @@ const HealthPackages = () => {
             >
               {pkg.popular && (
                 <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
-                  <div className="bg-gradient-primary text-white px-4 py-1 rounded-full text-sm font-medium flex items-center space-x-1">
+                  <div className="bg-gradient-primary text-white px-4 py-1 rounded-full text-sm font-medium flex items-center space-x-1 popular-badge">
                     <Star className="h-3 w-3" />
                     <span>Most Popular</span>
                   </div>
@@ -138,7 +138,7 @@ const HealthPackages = () => {
                 </div>
 
                 <Button 
-                  className={`w-full ${
+                  className={`w-full cta-button ${
                     pkg.popular 
                       ? "bg-secondary hover:bg-secondary-hover text-secondary-foreground" 
                       : "bg-primary hover:bg-primary-hover text-primary-foreground"

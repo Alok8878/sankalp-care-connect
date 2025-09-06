@@ -8,6 +8,7 @@ import BookingForm from "@/components/BookingForm";
 import FAQ from "@/components/FAQ";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
+import WhatsAppWidget from "@/components/WhatsAppWidget";
 
 const Index = () => {
   return (
@@ -24,6 +25,7 @@ const Index = () => {
         <Contact />
       </main>
       <Footer />
+      <WhatsAppWidget />
     </div>
   );
 };

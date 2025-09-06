@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
-import { Phone, Clock, MapPin, Menu, X, Download, Calendar } from "lucide-react";
+import { Phone, Clock, MapPin, Menu, X, Calendar } from "lucide-react";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -20,7 +20,7 @@ const Header = () => {
             <div className="flex items-center space-x-6">
               <div className="flex items-center space-x-2">
                 <Phone className="h-4 w-4" />
-                <span>+91 9876543210</span>
+                <span>+91 7024832751</span>
               </div>
               <div className="flex items-center space-x-2">
                 <Clock className="h-4 w-4" />
@@ -41,12 +41,14 @@ const Header = () => {
           <div className="flex justify-between items-center py-4">
             {/* Logo */}
             <div className="flex items-center space-x-3">
-              <div className="w-10 h-10 bg-gradient-primary rounded-lg flex items-center justify-center text-white font-bold text-xl">
-                S
-              </div>
+              <img 
+                src="/lovable-uploads/c47ab05b-5664-47f9-8a07-68af5b3c3433.png" 
+                alt="Sankalp Pathology Lab Logo" 
+                className="w-12 h-12 rounded-lg"
+              />
               <div>
                 <h1 className="text-xl font-bold text-foreground">Sankalp Pathology Lab</h1>
-                <p className="text-sm text-foreground-secondary">Trusted Healthcare Partner</p>
+                <p className="text-sm text-foreground-secondary">स्वास्थ्य ही संकल्प है...</p>
               </div>
             </div>
 
@@ -86,12 +88,8 @@ const Header = () => {
 
             {/* CTA Buttons */}
             <div className="hidden md:flex items-center space-x-3">
-              <Button variant="outline" className="border-primary text-primary hover:bg-primary hover:text-primary-foreground">
-                <Download className="w-4 h-4 mr-2" />
-                Download Report
-              </Button>
               <Button 
-                className="bg-secondary hover:bg-secondary-hover text-secondary-foreground"
+                className="bg-secondary hover:bg-secondary-hover text-secondary-foreground cta-button pulse-button relative"
                 onClick={() => scrollToSection("booking")}
               >
                 <Calendar className="w-4 h-4 mr-2" />
@@ -143,10 +141,6 @@ const Header = () => {
                   Contact
                 </button>
                 <div className="flex flex-col space-y-2 pt-3 border-t border-border">
-                  <Button variant="outline" size="sm" className="border-primary text-primary">
-                    <Download className="w-4 h-4 mr-2" />
-                    Download Report
-                  </Button>
                   <Button 
                     size="sm" 
                     className="bg-secondary hover:bg-secondary-hover text-secondary-foreground"
