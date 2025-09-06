@@ -2,41 +2,76 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
+/* Sankalp Pathology Lab Design System - Medical Professional Theme
+All colors MUST be HSL. Semantic tokens for consistent theming.
 */
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
-
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
-
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
-
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
-
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
-
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
-
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
-
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
-
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
-
-    --radius: 0.5rem;
+    /* Core Brand Colors */
+    --medical-blue: 214 100% 40%;        /* #0066CC - Primary brand blue */
+    --medical-green: 142 71% 45%;        /* #28A745 - Success green */
+    --medical-blue-light: 214 100% 95%;  /* Light blue backgrounds */
+    --medical-green-light: 142 71% 95%;  /* Light green backgrounds */
+    
+    /* Background System */
+    --background: 0 0% 100%;              /* Pure white */
+    --surface: 0 0% 98%;                  /* Subtle off-white */
+    --surface-elevated: 0 0% 100%;        /* Cards and elevated surfaces */
+    
+    /* Text Colors */
+    --foreground: 222 47% 11%;            /* Primary text - dark blue-grey */
+    --foreground-secondary: 215 16% 47%;   /* Secondary text - medium grey */
+    --foreground-muted: 215 16% 65%;      /* Muted text - light grey */
+    
+    /* Interactive Colors */
+    --primary: var(--medical-blue);
+    --primary-foreground: 0 0% 100%;
+    --primary-hover: 214 100% 35%;        /* Darker blue on hover */
+    
+    --secondary: var(--medical-green);
+    --secondary-foreground: 0 0% 100%;
+    --secondary-hover: 142 71% 40%;       /* Darker green on hover */
+    
+    /* Accent & States */
+    --accent: var(--medical-blue-light);
+    --accent-foreground: var(--medical-blue);
+    --muted: 210 40% 96%;
+    --muted-foreground: var(--foreground-secondary);
+    
+    /* Borders & Inputs */
+    --border: 214 31% 91%;
+    --border-strong: 214 31% 85%;
+    --input: 214 31% 91%;
+    --ring: var(--medical-blue);
+    
+    /* Status Colors */
+    --success: var(--medical-green);
+    --success-foreground: 0 0% 100%;
+    --warning: 38 92% 50%;                /* Amber warning */
+    --warning-foreground: 0 0% 100%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+    --emergency: 0 100% 45%;              /* Emergency red */
+    
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(var(--medical-blue)), hsl(var(--medical-green)));
+    --gradient-hero: linear-gradient(135deg, hsl(var(--medical-blue)) 0%, hsl(var(--medical-green)) 100%);
+    --gradient-card: linear-gradient(145deg, hsl(var(--surface-elevated)), hsl(var(--surface)));
+    --gradient-accent: linear-gradient(90deg, hsl(var(--medical-blue-light)), hsl(var(--medical-green-light)));
+    
+    /* Shadows & Effects */
+    --shadow-sm: 0 1px 2px 0 hsl(var(--medical-blue) / 0.1);
+    --shadow-md: 0 4px 6px -1px hsl(var(--medical-blue) / 0.1), 0 2px 4px -2px hsl(var(--medical-blue) / 0.1);
+    --shadow-lg: 0 10px 15px -3px hsl(var(--medical-blue) / 0.15), 0 4px 6px -4px hsl(var(--medical-blue) / 0.1);
+    --shadow-xl: 0 20px 25px -5px hsl(var(--medical-blue) / 0.2), 0 8px 10px -6px hsl(var(--medical-blue) / 0.1);
+    --shadow-glow: 0 0 20px hsl(var(--medical-blue) / 0.3);
+    
+    /* Spacing & Layout */
+    --radius: 0.75rem;
+    --radius-sm: 0.5rem;
+    --radius-lg: 1rem;
+    --radius-xl: 1.5rem;
 
     --sidebar-background: 0 0% 98%;
 
