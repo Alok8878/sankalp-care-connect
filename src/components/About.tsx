@@ -29,24 +29,24 @@ const About = () => {
     {
       icon: TestTube,
       number: "100+",
-      label: "Tests Available",
-      description: "Comprehensive diagnostics"
+      label: "Home Services",
+      description: "Delivered monthly"
     },
     {
       icon: Timer,
-      number: "24hrs",
-      label: "Report Turnaround",
-      description: "Fast and reliable"
+      number: "2hrs",
+      label: "Response Time",
+      description: "For home visits"
     }
   ];
 
   const values = [
-    { icon: Target, text: "Accuracy in every test result" },
-    { icon: Gauge, text: "Speed without compromising quality" },
-    { icon: Settings, text: "Modern equipment and technology" },
-    { icon: UserCheck, text: "Patient comfort and care" },
-    { icon: Workflow, text: "Optimized workflows for efficiency" },
-    { icon: ShieldCheck, text: "Data privacy and confidentiality" }
+    { icon: Target, text: "Accuracy in every service delivered" },
+    { icon: Gauge, text: "Quick response without compromising quality" },
+    { icon: Settings, text: "Modern equipment and trained professionals" },
+    { icon: UserCheck, text: "Patient comfort and personalized care" },
+    { icon: Workflow, text: "Streamlined home service processes" },
+    { icon: ShieldCheck, text: "Complete hygiene and safety protocols" }
   ];
 
   return (
@@ -57,23 +57,23 @@ const About = () => {
           <div className="space-y-8">
             <div>
               <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-6">
-                About <span className="bg-gradient-primary bg-clip-text text-transparent">Sankalp Pathology Lab</span>
+                About <span className="bg-gradient-primary bg-clip-text text-transparent">Sankalp Care Connect</span>
               </h2>
               <div className="space-y-4 text-foreground-secondary text-lg leading-relaxed">
                 <p>
-                  Established with a vision to provide accurate, reliable, and accessible healthcare services, 
-                  Sankalp Pathology Lab has been serving the Bhopal community for over 5 years with dedication 
+                  Established with a vision to provide accessible, reliable, and professional home healthcare services, 
+                  Sankalp Care Connect has been serving the Bhopal community for over 5 years with dedication 
                   and excellence.
                 </p>
                 <p>
-                  Our state-of-the-art facility combines advanced diagnostic technology with experienced 
-                  healthcare professionals to deliver precise results that help doctors make informed decisions 
-                  about your health.
+                  Our comprehensive home healthcare services combine experienced medical professionals with 
+                  advanced diagnostic technology to deliver quality care at your doorstep. From sample collection 
+                  to nursing care, we ensure your health needs are met with utmost care and convenience.
                 </p>
                 <p>
                   We believe that quality healthcare should be accessible to everyone, which is why we offer 
-                  transparent pricing, home collection services, and maintain the highest standards of 
-                  patient care and comfort.
+                  transparent pricing, doorstep services, and maintain the highest standards of 
+                  patient care and safety in the comfort of your home.
                 </p>
               </div>
             </div>

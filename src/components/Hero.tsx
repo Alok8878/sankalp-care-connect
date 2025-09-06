@@ -9,11 +9,11 @@ const Hero = () => {
   };
 
   const handleCall = () => {
-    window.open("tel:+919876543210", "_self");
+    window.open("tel:+917024832751", "_self");
   };
 
   const handleDirections = () => {
-    window.open("https://maps.google.com/?q=Sankalp+Pathology+Lab+Bhopal", "_blank");
+    window.open("https://maps.google.com/?q=Sankalp+Care+Connect+Bhopal+Ayodhya+Bypass", "_blank");
   };
 
   return (
@@ -24,14 +24,13 @@ const Hero = () => {
           <div className="space-y-8">
             <div className="space-y-6">
               <h1 className="text-4xl lg:text-5xl font-bold text-foreground leading-tight">
-                Sankalp Pathology Lab –{" "}
+                Home Healthcare Services Bhopal –{" "}
                 <span className="bg-gradient-primary bg-clip-text text-transparent">
-                  Trusted Pathology, X-Ray & ECG
-                </span>{" "}
-                in Bhopal
+                  Sankalp Care Connect
+                </span>
               </h1>
               <p className="text-xl text-foreground-secondary">
-                Accurate diagnostic reports with fast turnaround times
+                Professional healthcare services at your doorstep | स्वास्थ्य सेवा घर पर
               </p>
             </div>
 
@@ -42,14 +41,14 @@ const Hero = () => {
                 <div className="flex items-start space-x-3">
                   <MapPin className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
                   <div>
-                    <p className="font-medium text-foreground">Sankalp Pathology Lab</p>
+                    <p className="font-medium text-foreground">Sankalp Care Connect</p>
                     <p className="text-foreground-secondary">Ayodhya Bypass, Bhopal, Madhya Pradesh</p>
                   </div>
                 </div>
                 <div className="flex items-center space-x-3">
                   <Phone className="h-5 w-5 text-secondary flex-shrink-0" />
                   <div>
-                    <p className="font-medium text-foreground">+91 9876543210</p>
+                    <p className="font-medium text-foreground">+91 7024832751</p>
                     <p className="text-sm text-foreground-secondary">Phone & WhatsApp</p>
                   </div>
                 </div>

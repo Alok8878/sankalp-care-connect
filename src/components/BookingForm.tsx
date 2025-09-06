@@ -40,20 +40,20 @@ const BookingForm = () => {
   const { toast } = useToast();
 
   const testOptions = [
-    "Basic Health Check - ₹899",
-    "Comprehensive Full Body Check - ₹2499",
-    "Diabetes Care Profile - ₹1299", 
-    "Thyroid Profile - ₹699",
-    "CBC (Complete Blood Count)",
-    "Lipid Profile",
-    "Liver Function Test",
-    "Kidney Function Test",
-    "HbA1c",
-    "Vitamin D",
-    "Vitamin B12",
-    "Digital X-Ray - Chest",
-    "ECG",
-    "Custom Test (specify in notes)"
+    "Home Wellness Check - ₹1299",
+    "Complete Home Care Package - ₹2999",
+    "Senior Care at Home - ₹2199", 
+    "Basic Home Service - ₹699",
+    "Home Sample Collection",
+    "Home Nursing Care",
+    "Physiotherapy at Home",
+    "Medical Equipment Rental",
+    "Teleconsultation",
+    "Blood Tests at Home",
+    "Diabetes Management",
+    "Elderly Care Services",
+    "Post-operative Home Care",
+    "Custom Service (specify in notes)"
   ];
 
   const timeSlots = [
@@ -92,16 +92,16 @@ const BookingForm = () => {
     setIsSubmitting(true);
 
     // WhatsApp auto-send integration
-    const whatsappMessage = `🏥 *NEW BOOKING - Sankalp Pathology Lab*
+    const whatsappMessage = `🏥 *NEW BOOKING - Sankalp Care Connect*
 
 👤 Name: ${formData.fullName}
 📱 Mobile: ${formData.mobile}
 📧 Email: ${formData.email}
-🔬 Test: ${formData.testPackage}
+🔬 Service: ${formData.testPackage}
 📅 Date: ${formData.preferredDate}
 ⏰ Time: ${formData.preferredTime}
 👨‍⚕️ Doctor: ${formData.doctorName || 'Not specified'}
-📍 Address: ${formData.address || 'Lab Visit'}
+📍 Address: ${formData.address || 'Service at clinic'}
 📝 Notes: ${formData.notes || 'None'}`;
 
     // Auto-open WhatsApp with message
@@ -141,10 +141,10 @@ const BookingForm = () => {
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-4">
-              <span className="bg-gradient-primary bg-clip-text text-transparent">Book Your Test</span>
+              <span className="bg-gradient-primary bg-clip-text text-transparent">Book Your Service</span>
             </h2>
             <p className="text-xl text-foreground-secondary">
-              Schedule your appointment easily and get accurate results fast
+              Schedule your home healthcare service easily and get professional care at your doorstep
             </p>
           </div>
 
@@ -154,7 +154,7 @@ const BookingForm = () => {
               <Card className="p-8">
                 <div className="bg-gradient-primary text-white p-4 rounded-lg mb-6">
                   <h3 className="text-xl font-semibold">Online Booking Form</h3>
-                  <p className="text-sm opacity-90">Fill out the form below to book your test</p>
+                  <p className="text-sm opacity-90">Fill out the form below to book your home healthcare service</p>
                 </div>
 
                 <form onSubmit={handleSubmit} className="space-y-6">
@@ -179,7 +179,7 @@ const BookingForm = () => {
                         onChange={(e) => handleInputChange("mobile", e.target.value)}
                         required
                         className="mt-1"
-                        placeholder="+91 98765 43210"
+                        placeholder="Enter mobile number"
                       />
                     </div>
                   </div>
@@ -201,10 +201,10 @@ const BookingForm = () => {
                   </div>
 
                   <div>
-                    <Label htmlFor="testPackage" className="text-foreground font-medium">Test/Package Selection *</Label>
+                    <Label htmlFor="testPackage" className="text-foreground font-medium">Service/Package Selection *</Label>
                     <Select value={formData.testPackage} onValueChange={(value) => handleInputChange("testPackage", value)}>
                       <SelectTrigger className="mt-1">
-                        <SelectValue placeholder="Select a test or package" />
+                        <SelectValue placeholder="Select a service or package" />
                       </SelectTrigger>
                       <SelectContent>
                         {testOptions.map((test, index) => (
@@ -257,23 +257,23 @@ const BookingForm = () => {
                   </div>
 
                   <div>
-                    <Label htmlFor="address" className="text-foreground font-medium">Address (For Home Collection)</Label>
+                    <Label htmlFor="address" className="text-foreground font-medium">Service Address</Label>
                     <Textarea
                       id="address"
                       value={formData.address}
                       onChange={(e) => handleInputChange("address", e.target.value)}
                       className="mt-1"
-                      placeholder="Complete address for home sample collection"
+                      placeholder="Complete address for home service delivery"
                       rows={3}
                     />
                   </div>
 
                   <div>
-                    <Label className="text-foreground font-medium">Prescription Upload</Label>
+                    <Label className="text-foreground font-medium">Document Upload</Label>
                     <div className="mt-1 border-2 border-dashed border-border rounded-lg p-6 text-center hover:border-primary transition-colors">
                       <Upload className="h-8 w-8 text-foreground-muted mx-auto mb-2" />
                       <p className="text-foreground-secondary">
-                        Drag and drop your prescription here, or{" "}
+                        Drag and drop your documents here, or{" "}
                         <span className="text-primary cursor-pointer hover:underline">browse</span>
                       </p>
                       <p className="text-xs text-foreground-muted mt-1">
@@ -359,8 +359,8 @@ const BookingForm = () => {
                   <div className="flex items-center space-x-3 p-3 bg-white rounded-lg">
                     <Clock className="h-6 w-6 text-medical-blue" />
                     <div>
-                      <p className="font-medium text-foreground">Quick Service</p>
-                      <p className="text-sm text-foreground-secondary">24hr report delivery</p>
+                      <p className="font-medium text-foreground">Quick Response</p>
+                      <p className="text-sm text-foreground-secondary">2hr response time</p>
                     </div>
                   </div>
                 </div>
@@ -372,26 +372,21 @@ const BookingForm = () => {
                   <div className="flex items-start space-x-2">
                     <CheckCircle className="h-4 w-4 text-secondary mt-0.5" />
                     <p className="text-sm text-foreground-secondary">
-                      Instant booking confirmation email
+                      Instant booking confirmation via WhatsApp
                     </p>
                   </div>
                   <div className="flex items-start space-x-2">
                     <CheckCircle className="h-4 w-4 text-secondary mt-0.5" />
                     <p className="text-sm text-foreground-secondary">
-                      24-hour reminder before appointment
+                      Service reminders before appointment
                     </p>
                   </div>
                   <div className="flex items-start space-x-2">
                     <CheckCircle className="h-4 w-4 text-secondary mt-0.5" />
                     <p className="text-sm text-foreground-secondary">
-                      Digital report delivery via email
+                      Digital service reports and updates
                     </p>
                   </div>
-                </div>
-                <div className="mt-4 p-3 bg-medical-blue-light rounded-lg">
-                  <p className="text-xs text-foreground-secondary">
-                    <strong>Note:</strong> For complete email automation features, connect this website to Supabase backend.
-                  </p>
                 </div>
               </Card>
             </div>

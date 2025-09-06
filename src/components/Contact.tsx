@@ -13,15 +13,15 @@ import {
 
 const Contact = () => {
   const handleDirections = () => {
-    window.open("https://maps.google.com/?q=Sankalp+Pathology+Lab+Bhopal", "_blank");
+    window.open("https://maps.google.com/?q=Sankalp+Care+Connect+Bhopal+Ayodhya+Bypass", "_blank");
   };
 
   const handleCall = () => {
-    window.open("tel:+919876543210", "_self");
+    window.open("tel:+917024832751", "_self");
   };
 
   const handleEmail = () => {
-    window.open("mailto:info@sankalplab.com", "_self");
+    window.open("mailto:sankalppathologylab@gmail.com", "_self");
   };
 
   const operatingHours = [
@@ -35,10 +35,10 @@ const Contact = () => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-4">
-            Contact & <span className="bg-gradient-primary bg-clip-text text-transparent">Timings</span>
+            Contact & <span className="bg-gradient-primary bg-clip-text text-transparent">Location</span>
           </h2>
           <p className="text-xl text-foreground-secondary">
-            Visit us or get in touch for any queries about our services
+            Get in touch for home healthcare services or visit our main office
           </p>
         </div>
 
@@ -53,7 +53,7 @@ const Contact = () => {
               
               <div className="space-y-4">
                 <div>
-                  <h4 className="font-semibold text-foreground mb-2">Sankalp Pathology Lab</h4>
+                  <h4 className="font-semibold text-foreground mb-2">Sankalp Care Connect</h4>
                   <p className="text-foreground-secondary">
                     Near Ayodhya Bypass<br />
                     Indus Park Area<br />
@@ -107,12 +107,12 @@ const Contact = () => {
               <div className="space-y-3">
                 <div>
                   <p className="font-medium text-foreground">Phone & WhatsApp</p>
-                  <p className="text-lg text-primary font-semibold">+91 9876543210</p>
+                  <p className="text-lg text-primary font-semibold">+91 7024832751</p>
                   <p className="text-sm text-foreground-secondary">Available during operating hours</p>
                 </div>
                 <div>
                   <p className="font-medium text-foreground">Email</p>
-                  <p className="text-primary">info@sankalplab.com</p>
+                  <p className="text-primary">sankalppathologylab@gmail.com</p>
                   <p className="text-sm text-foreground-secondary">For general inquiries and reports</p>
                 </div>
               </div>
@@ -144,14 +144,22 @@ const Contact = () => {
               </div>
             </Card>
 
-            {/* Interactive Map Placeholder */}
+            {/* Google Maps Embed */}
             <Card className="p-6 bg-surface-elevated">
-              <h3 className="text-xl font-semibold text-foreground mb-4">Location Map</h3>
-              <div className="bg-gradient-to-br from-medical-blue-light to-medical-green-light rounded-lg p-8 text-center">
-                <MapPin className="h-12 w-12 text-primary mx-auto mb-4" />
-                <p className="text-foreground-secondary mb-4">
-                  Interactive map showing our exact location
-                </p>
+              <h3 className="text-xl font-semibold text-foreground mb-4">Our Location</h3>
+              <div className="rounded-lg overflow-hidden shadow-lg">
+                <iframe 
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3665.8234567890123!2d77.4126!3d23.2599!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjPCsDE1JzM1LjYiTiA3N8KwMjQnNDUuNCJF!5e0!3m2!1sen!2sin!4v1641234567890"
+                  width="100%"
+                  height="250"
+                  style={{ border: 0 }}
+                  allowFullScreen
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  title="Sankalp Care Connect Location"
+                ></iframe>
+              </div>
+              <div className="mt-4 flex justify-center">
                 <Button onClick={handleDirections} className="bg-primary hover:bg-primary-hover text-primary-foreground">
                   <Navigation className="w-4 h-4 mr-2" />
                   Open in Google Maps

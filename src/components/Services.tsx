@@ -3,64 +3,90 @@ import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { 
   TestTube, 
-  X as XRay, 
+  Users, 
   Heart, 
   Home,
   CheckCircle,
   Phone,
-  Calendar
+  Calendar,
+  Stethoscope,
+  PhoneCall,
+  HeartHandshake
 } from "lucide-react";
 
 const Services = () => {
   const [activeTab, setActiveTab] = useState("pathology");
 
   const tabs = [
-    { id: "pathology", label: "Pathology", icon: TestTube },
-    { id: "xray", label: "Digital X-Ray", icon: XRay },
-    { id: "ecg", label: "ECG", icon: Heart },
-    { id: "home", label: "Home Collection", icon: Home }
+    { id: "pathology", label: "Sample Collection", icon: TestTube },
+    { id: "nursing", label: "Home Nursing", icon: Users },
+    { id: "physiotherapy", label: "Physiotherapy", icon: Heart },
+    { id: "equipment", label: "Medical Equipment", icon: Stethoscope },
+    { id: "teleconsult", label: "Teleconsultation", icon: PhoneCall }
   ];
 
-  const pathologyTests = [
+  const pathologyServices = [
     {
-      category: "Routine Tests",
-      tests: ["CBC", "ESR", "Blood Sugar", "Lipid Profile", "Liver Function", "Kidney Function"]
+      category: "Blood Tests at Home",
+      tests: ["CBC", "Sugar Tests", "Lipid Profile", "Liver Function", "Kidney Function", "Thyroid Profile"]
     },
     {
-      category: "Diabetes Tests",
-      tests: ["HbA1c", "Fasting Sugar", "Post-meal Sugar", "Random Sugar"]
+      category: "Specialized Tests",
+      tests: ["HbA1c", "Vitamin D", "Vitamin B12", "Cardiac Markers", "Tumor Markers"]
     },
     {
-      category: "Hormones",
-      tests: ["Vitamin D", "Vitamin B12", "Testosterone", "Thyroid Profile"]
+      category: "Infection Screening",
+      tests: ["COVID-19 RT-PCR", "Dengue", "Malaria", "Typhoid", "Hepatitis Profile"]
     },
     {
-      category: "Infection Markers",
-      tests: ["CRP", "Dengue NS1/IgG/IgM", "Widal Test", "Malaria"]
+      category: "Health Packages",
+      tests: ["Full Body Check", "Diabetes Package", "Heart Health", "Senior Citizen Package"]
     }
   ];
 
-  const xrayServices = [
-    "Chest X-ray",
-    "Cervical Spine",
-    "Lumbar Spine", 
-    "Abdomen",
-    "Upper & Lower Limbs",
-    "Skull & Joints"
+  const nursingServices = [
+    "Post-operative care at home",
+    "Injection and IV administration", 
+    "Wound dressing and care",
+    "Elderly care assistance",
+    "Medication management",
+    "Vital signs monitoring"
   ];
 
-  const ecgFeatures = [
-    "12-lead resting ECG service",
-    "Prompt printouts and comfortable environment",
-    "Technician guidance and digital report delivery",
-    "Preparation instructions included"
+  const physiotherapyServices = [
+    "Post-stroke rehabilitation",
+    "Joint pain and mobility therapy",
+    "Sports injury recovery",
+    "Elderly fitness programs",
+    "Posture correction exercises",
+    "Pain management techniques"
+  ];
+
+  const medicalEquipment = [
+    "Oxygen concentrators",
+    "Hospital beds",
+    "Wheelchairs and walkers",
+    "Blood pressure monitors",
+    "Nebulizers",
+    "Patient lifting aids"
+  ];
+
+  const teleconsultServices = [
+    "General physician consultation",
+    "Specialist doctor sessions",
+    "Follow-up consultations",
+    "Prescription renewals",
+    "Health monitoring guidance",
+    "Emergency medical advice"
   ];
 
   const homeCollectionAreas = [
-    "Ayodhya Bypass",
-    "Indus Park", 
-    "Ganesh Galaxy City",
-    "Surrounding areas in Bhopal"
+    "Ayodhya Bypass & surrounding areas",
+    "Indus Park & nearby localities", 
+    "Ganesh Galaxy City region",
+    "Kolar Road area",
+    "MP Nagar zones",
+    "Berasia Road vicinity"
   ];
 
   const renderTabContent = () => {
@@ -69,15 +95,15 @@ const Services = () => {
         return (
           <div className="space-y-6">
             <div>
-              <h3 className="text-2xl font-semibold text-foreground mb-4">Comprehensive Pathology Services</h3>
+              <h3 className="text-2xl font-semibold text-foreground mb-4">Home Sample Collection Services</h3>
               <p className="text-foreground-secondary mb-6">
-                Advanced laboratory testing with state-of-the-art equipment and experienced technicians 
-                for accurate and reliable results.
+                Professional sample collection at your doorstep with trained phlebotomists and 
+                proper safety protocols. Reports delivered digitally within 24 hours.
               </p>
             </div>
             <div className="grid md:grid-cols-2 gap-6">
-              {pathologyTests.map((category, index) => (
-                <Card key={index} className="p-6 bg-surface-elevated">
+              {pathologyServices.map((category, index) => (
+                <Card key={index} className="p-6 bg-surface-elevated hover:shadow-lg transition-shadow">
                   <h4 className="text-lg font-semibold text-foreground mb-3">{category.category}</h4>
                   <ul className="space-y-2">
                     {category.tests.map((test, testIndex) => (
@@ -90,24 +116,170 @@ const Services = () => {
                 </Card>
               ))}
             </div>
+            <div className="mt-8">
+              <Card className="p-6 bg-gradient-accent">
+                <h4 className="text-lg font-semibold text-foreground mb-4">Coverage Areas in Bhopal</h4>
+                <div className="grid md:grid-cols-2 gap-4">
+                  {homeCollectionAreas.map((area, index) => (
+                    <div key={index} className="flex items-center space-x-2">
+                      <CheckCircle className="h-4 w-4 text-primary" />
+                      <span className="text-foreground-secondary">{area}</span>
+                    </div>
+                  ))}
+                </div>
+              </Card>
+            </div>
           </div>
         );
 
-      case "xray":
+      case "nursing":
         return (
           <div className="space-y-6">
             <div>
-              <h3 className="text-2xl font-semibold text-foreground mb-4">Digital X-Ray Services</h3>
+              <h3 className="text-2xl font-semibold text-foreground mb-4">Professional Home Nursing Care</h3>
               <p className="text-foreground-secondary mb-6">
-                State-of-the-art digital imaging technology providing clear, high-quality images with 
-                instant delivery via WhatsApp and email.
+                Experienced nurses providing comprehensive healthcare services at home. 
+                Personalized care plans tailored to your specific medical needs.
               </p>
             </div>
             <div className="grid md:grid-cols-2 gap-8">
               <Card className="p-6 bg-surface-elevated">
-                <h4 className="text-lg font-semibold text-foreground mb-4">Available X-Ray Services</h4>
+                <h4 className="text-lg font-semibold text-foreground mb-4">Available Nursing Services</h4>
                 <ul className="space-y-3">
-                  {xrayServices.map((service, index) => (
+                  {nursingServices.map((service, index) => (
+                    <li key={index} className="flex items-center space-x-2">
+                      <CheckCircle className="h-4 w-4 text-secondary" />
+                      <span className="text-foreground-secondary">{service}</span>
+                    </li>
+                  ))}
+                </ul>
+              </Card>
+              <Card className="p-6 bg-gradient-primary text-white">
+                <h4 className="text-lg font-semibold mb-4">Why Choose Our Nurses?</h4>
+                <ul className="space-y-2 text-sm">
+                  <li>• Registered and experienced professionals</li>
+                  <li>• Proper infection control protocols</li>
+                  <li>• Flexible scheduling as per your needs</li>
+                  <li>• Regular health monitoring and updates</li>
+                  <li>• Compassionate and patient-centered care</li>
+                  <li>• 24/7 emergency support available</li>
+                </ul>
+              </Card>
+            </div>
+          </div>
+        );
+
+      case "physiotherapy":
+        return (
+          <div className="space-y-6">
+            <div>
+              <h3 className="text-2xl font-semibold text-foreground mb-4">Physiotherapy at Home</h3>
+              <p className="text-foreground-secondary mb-6">
+                Professional physiotherapy services in the comfort of your home. 
+                Customized treatment plans for faster recovery and improved mobility.
+              </p>
+            </div>
+            <div className="grid md:grid-cols-2 gap-8">
+              <Card className="p-6 bg-surface-elevated">
+                <h4 className="text-lg font-semibold text-foreground mb-4">Physiotherapy Services</h4>
+                <ul className="space-y-3">
+                  {physiotherapyServices.map((service, index) => (
+                    <li key={index} className="flex items-start space-x-2">
+                      <CheckCircle className="h-4 w-4 text-secondary mt-0.5 flex-shrink-0" />
+                      <span className="text-foreground-secondary">{service}</span>
+                    </li>
+                  ))}
+                </ul>
+              </Card>
+              <Card className="p-6 bg-gradient-accent">
+                <h4 className="text-lg font-semibold text-foreground mb-4">Treatment Process</h4>
+                <div className="space-y-4">
+                  <div className="flex items-start space-x-3">
+                    <div className="w-8 h-8 bg-primary rounded-full flex items-center justify-center text-white font-semibold text-sm">1</div>
+                    <div>
+                      <p className="font-medium text-foreground">Initial Assessment</p>
+                      <p className="text-sm text-foreground-secondary">Comprehensive evaluation at home</p>
+                    </div>
+                  </div>
+                  <div className="flex items-start space-x-3">
+                    <div className="w-8 h-8 bg-primary rounded-full flex items-center justify-center text-white font-semibold text-sm">2</div>
+                    <div>
+                      <p className="font-medium text-foreground">Custom Treatment Plan</p>
+                      <p className="text-sm text-foreground-secondary">Tailored therapy schedule</p>
+                    </div>
+                  </div>
+                  <div className="flex items-start space-x-3">
+                    <div className="w-8 h-8 bg-primary rounded-full flex items-center justify-center text-white font-semibold text-sm">3</div>
+                    <div>
+                      <p className="font-medium text-foreground">Regular Sessions</p>
+                      <p className="text-sm text-foreground-secondary">Professional therapy at home</p>
+                    </div>
+                  </div>
+                  <div className="flex items-start space-x-3">
+                    <div className="w-8 h-8 bg-primary rounded-full flex items-center justify-center text-white font-semibold text-sm">4</div>
+                    <div>
+                      <p className="font-medium text-foreground">Progress Monitoring</p>
+                      <p className="text-sm text-foreground-secondary">Regular evaluation and adjustments</p>
+                    </div>
+                  </div>
+                </div>
+              </Card>
+            </div>
+          </div>
+        );
+
+      case "equipment":
+        return (
+          <div className="space-y-6">
+            <div>
+              <h3 className="text-2xl font-semibold text-foreground mb-4">Medical Equipment Rental</h3>
+              <p className="text-foreground-secondary mb-6">
+                High-quality medical equipment available for rent with delivery and setup at your home. 
+                Affordable rates with maintenance support included.
+              </p>
+            </div>
+            <div className="grid md:grid-cols-2 gap-8">
+              <Card className="p-6 bg-surface-elevated">
+                <h4 className="text-lg font-semibold text-foreground mb-4">Available Equipment</h4>
+                <ul className="space-y-3">
+                  {medicalEquipment.map((equipment, index) => (
+                    <li key={index} className="flex items-center space-x-2">
+                      <CheckCircle className="h-4 w-4 text-secondary" />
+                      <span className="text-foreground-secondary">{equipment}</span>
+                    </li>
+                  ))}
+                </ul>
+              </Card>
+              <Card className="p-6 bg-gradient-primary text-white">
+                <h4 className="text-lg font-semibold mb-4">Rental Benefits</h4>
+                <ul className="space-y-2 text-sm">
+                  <li>• Free home delivery and setup</li>
+                  <li>• Regular maintenance included</li>
+                  <li>• Flexible rental periods</li>
+                  <li>• 24/7 technical support</li>
+                  <li>• Sanitized and safety-checked equipment</li>
+                  <li>• Cost-effective compared to purchase</li>
+                </ul>
+              </Card>
+            </div>
+          </div>
+        );
+
+      case "teleconsult":
+        return (
+          <div className="space-y-6">
+            <div>
+              <h3 className="text-2xl font-semibold text-foreground mb-4">Teleconsultation Services</h3>
+              <p className="text-foreground-secondary mb-6">
+                Connect with qualified doctors from the comfort of your home. 
+                Video consultations, prescription services, and follow-up care available.
+              </p>
+            </div>
+            <div className="grid md:grid-cols-2 gap-8">
+              <Card className="p-6 bg-surface-elevated">
+                <h4 className="text-lg font-semibold text-foreground mb-4">Consultation Services</h4>
+                <ul className="space-y-3">
+                  {teleconsultServices.map((service, index) => (
                     <li key={index} className="flex items-center space-x-2">
                       <CheckCircle className="h-4 w-4 text-secondary" />
                       <span className="text-foreground-secondary">{service}</span>
@@ -116,118 +288,34 @@ const Services = () => {
                 </ul>
               </Card>
               <Card className="p-6 bg-gradient-accent">
-                <h4 className="text-lg font-semibold text-foreground mb-4">Digital X-Ray Benefits</h4>
-                <ul className="space-y-3">
-                  <li className="flex items-center space-x-2">
-                    <CheckCircle className="h-4 w-4 text-primary" />
-                    <span className="text-foreground-secondary">Clear digital films</span>
-                  </li>
-                  <li className="flex items-center space-x-2">
-                    <CheckCircle className="h-4 w-4 text-primary" />
-                    <span className="text-foreground-secondary">Instant WhatsApp delivery</span>
-                  </li>
-                  <li className="flex items-center space-x-2">
-                    <CheckCircle className="h-4 w-4 text-primary" />
-                    <span className="text-foreground-secondary">Email report delivery</span>
-                  </li>
-                  <li className="flex items-center space-x-2">
-                    <CheckCircle className="h-4 w-4 text-primary" />
-                    <span className="text-foreground-secondary">No radiation exposure delays</span>
-                  </li>
-                </ul>
-              </Card>
-            </div>
-          </div>
-        );
-
-      case "ecg":
-        return (
-          <div className="space-y-6">
-            <div>
-              <h3 className="text-2xl font-semibold text-foreground mb-4">ECG Services</h3>
-              <p className="text-foreground-secondary mb-6">
-                Professional electrocardiogram services with experienced technicians and comfortable 
-                environment for accurate cardiac monitoring.
-              </p>
-            </div>
-            <div className="grid md:grid-cols-2 gap-8">
-              <Card className="p-6 bg-surface-elevated">
-                <h4 className="text-lg font-semibold text-foreground mb-4">ECG Features</h4>
-                <ul className="space-y-3">
-                  {ecgFeatures.map((feature, index) => (
-                    <li key={index} className="flex items-start space-x-2">
-                      <CheckCircle className="h-4 w-4 text-secondary mt-0.5 flex-shrink-0" />
-                      <span className="text-foreground-secondary">{feature}</span>
-                    </li>
-                  ))}
-                </ul>
-              </Card>
-              <Card className="p-6 bg-gradient-primary text-white">
-                <h4 className="text-lg font-semibold mb-4">When You Need ECG</h4>
-                <ul className="space-y-2 text-sm">
-                  <li>• Chest pain or discomfort</li>
-                  <li>• Irregular heartbeat</li>
-                  <li>• Heart palpitations</li>
-                  <li>• Routine health checkups</li>
-                  <li>• Pre-surgical screening</li>
-                  <li>• Monitoring heart conditions</li>
-                </ul>
-              </Card>
-            </div>
-          </div>
-        );
-
-      case "home":
-        return (
-          <div className="space-y-6">
-            <div>
-              <h3 className="text-2xl font-semibold text-foreground mb-4">Home Collection Service</h3>
-              <p className="text-foreground-secondary mb-6">
-                Convenient sample collection at your doorstep with trained phlebotomists and 
-                proper safety protocols.
-              </p>
-            </div>
-            <div className="grid md:grid-cols-2 gap-8">
-              <Card className="p-6 bg-surface-elevated">
-                <h4 className="text-lg font-semibold text-foreground mb-4">Coverage Areas</h4>
-                <ul className="space-y-3">
-                  {homeCollectionAreas.map((area, index) => (
-                    <li key={index} className="flex items-center space-x-2">
-                      <CheckCircle className="h-4 w-4 text-secondary" />
-                      <span className="text-foreground-secondary">{area}</span>
-                    </li>
-                  ))}
-                </ul>
-              </Card>
-              <Card className="p-6 bg-gradient-accent">
-                <h4 className="text-lg font-semibold text-foreground mb-4">Collection Process</h4>
+                <h4 className="text-lg font-semibold text-foreground mb-4">How It Works</h4>
                 <div className="space-y-4">
                   <div className="flex items-start space-x-3">
                     <div className="w-8 h-8 bg-primary rounded-full flex items-center justify-center text-white font-semibold text-sm">1</div>
                     <div>
-                      <p className="font-medium text-foreground">Call/WhatsApp</p>
-                      <p className="text-sm text-foreground-secondary">Book your appointment</p>
+                      <p className="font-medium text-foreground">Book Appointment</p>
+                      <p className="text-sm text-foreground-secondary">Schedule via call or WhatsApp</p>
                     </div>
                   </div>
                   <div className="flex items-start space-x-3">
                     <div className="w-8 h-8 bg-primary rounded-full flex items-center justify-center text-white font-semibold text-sm">2</div>
                     <div>
-                      <p className="font-medium text-foreground">Slot Confirmation</p>
-                      <p className="text-sm text-foreground-secondary">Receive confirmation</p>
+                      <p className="font-medium text-foreground">Video Consultation</p>
+                      <p className="text-sm text-foreground-secondary">Connect with qualified doctors</p>
                     </div>
                   </div>
                   <div className="flex items-start space-x-3">
                     <div className="w-8 h-8 bg-primary rounded-full flex items-center justify-center text-white font-semibold text-sm">3</div>
                     <div>
-                      <p className="font-medium text-foreground">Technician Visit</p>
-                      <p className="text-sm text-foreground-secondary">Professional sample collection</p>
+                      <p className="font-medium text-foreground">Digital Prescription</p>
+                      <p className="text-sm text-foreground-secondary">Receive prescription digitally</p>
                     </div>
                   </div>
                   <div className="flex items-start space-x-3">
                     <div className="w-8 h-8 bg-primary rounded-full flex items-center justify-center text-white font-semibold text-sm">4</div>
                     <div>
-                      <p className="font-medium text-foreground">Report Delivery</p>
-                      <p className="text-sm text-foreground-secondary">Digital delivery via email/WhatsApp</p>
+                      <p className="font-medium text-foreground">Follow-up Care</p>
+                      <p className="text-sm text-foreground-secondary">Regular health monitoring</p>
                     </div>
                   </div>
                 </div>
@@ -246,10 +334,10 @@ const Services = () => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-4">
-            Our <span className="bg-gradient-primary bg-clip-text text-transparent">Services</span>
+            Our <span className="bg-gradient-primary bg-clip-text text-transparent">Home Healthcare Services</span>
           </h2>
           <p className="text-xl text-foreground-secondary max-w-2xl mx-auto">
-            Complete diagnostic services under one roof with advanced technology and experienced professionals
+            Comprehensive healthcare services delivered to your doorstep with professional care and modern technology
           </p>
         </div>
 
@@ -284,12 +372,15 @@ const Services = () => {
         {/* CTA Section */}
         <div className="mt-12 text-center">
           <Card className="p-8 bg-gradient-accent">
-            <h3 className="text-2xl font-semibold text-foreground mb-4">
-              Need Help Choosing the Right Test?
-            </h3>
+            <div className="flex items-center justify-center mb-4">
+              <HeartHandshake className="w-8 h-8 text-primary mr-3" />
+              <h3 className="text-2xl font-semibold text-foreground">
+                Need Personalized Healthcare at Home?
+              </h3>
+            </div>
             <p className="text-foreground-secondary mb-6 max-w-2xl mx-auto">
-              Our experienced team can help you select the appropriate tests based on your health needs 
-              and doctor's recommendations.
+              Our experienced healthcare professionals are ready to provide quality care at your doorstep. 
+              Contact us to discuss your specific healthcare needs.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <Button 
@@ -298,16 +389,16 @@ const Services = () => {
                 onClick={() => document.getElementById("booking")?.scrollIntoView({ behavior: "smooth" })}
               >
                 <Calendar className="w-5 h-5 mr-2" />
-                Book a Test
+                Book Service
               </Button>
               <Button 
                 size="lg" 
                 variant="outline"
                 className="border-primary text-primary hover:bg-primary hover:text-primary-foreground"
-                onClick={() => window.open("tel:+919876543210", "_self")}
+                onClick={() => window.open("tel:+917024832751", "_self")}
               >
                 <Phone className="w-5 h-5 mr-2" />
-                Call for Guidance
+                Call for Consultation
               </Button>
             </div>
           </Card>
