@@ -13,7 +13,7 @@ import {
 
 const Contact = () => {
   const handleDirections = () => {
-    window.open("https://maps.google.com/?q=Sankalp+Care+Connect+Bhopal+Ayodhya+Bypass", "_blank");
+    window.open("https://share.google/gPBwl2q4EngW4DRLI", "_blank");
   };
 
   const handleCall = () => {
@@ -48,19 +48,16 @@ const Contact = () => {
             <Card className="p-6 bg-surface-elevated">
               <h3 className="text-xl font-semibold text-foreground mb-6 flex items-center">
                 <MapPin className="h-5 w-5 text-primary mr-2" />
-                Visit Our Laboratory
+                Find Us
               </h3>
               
               <div className="space-y-4">
                 <div>
                   <h4 className="font-semibold text-foreground mb-2">Sankalp Care Connect</h4>
                   <p className="text-foreground-secondary">
-                    Near Ayodhya Bypass<br />
-                    Indus Park Area<br />
-                    Bhopal, Madhya Pradesh 462021
-                  </p>
-                  <p className="text-sm text-foreground-muted mt-2">
-                    <strong>Landmark:</strong> Opposite City Hospital, Near Ganesh Galaxy City
+                    Front of, Ganesh Galaxy City<br />
+                    Ayodhya Bypass Road, Indus Park, Phase 2<br />
+                    Bhopal, Madhya Pradesh 462041
                   </p>
                 </div>
 
@@ -149,7 +146,7 @@ const Contact = () => {
               <h3 className="text-xl font-semibold text-foreground mb-4">Our Location</h3>
               <div className="rounded-lg overflow-hidden shadow-lg">
                 <iframe 
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3665.8234567890123!2d77.4126!3d23.2599!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjPCsDE1JzM1LjYiTiA3N8KwMjQnNDUuNCJF!5e0!3m2!1sen!2sin!4v1641234567890"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3665.43!2d77.41569!3d23.25988!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x397c439ce6e3c789%3A0x9f8a8e8d9c8b8c8c!2sGanesh%20Galaxy%20City%2C%20Ayodhya%20Bypass%20Rd%2C%20Indus%20Park%2C%20Phase%202%2C%20Bhopal%2C%20Madhya%20Pradesh%20462041!5e0!3m2!1sen!2sin!4v1641234567890"
                   width="100%"
                   height="250"
                   style={{ border: 0 }}
