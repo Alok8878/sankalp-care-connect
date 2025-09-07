@@ -104,7 +104,7 @@ const Contact = () => {
               <div className="space-y-3">
                 <div>
                   <p className="font-medium text-foreground">Phone & WhatsApp</p>
-                  <p className="text-lg text-primary font-semibold">+91 7024832751</p>
+                  <p className="text-lg text-primary font-semibold">+91 70248 32751</p>
                   <p className="text-sm text-foreground-secondary">Available during operating hours</p>
                 </div>
                 <div>

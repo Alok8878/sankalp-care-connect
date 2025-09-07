@@ -110,12 +110,12 @@ const Footer = () => {
               </div>
               <div className="flex items-center space-x-2">
                 <Phone className="h-4 w-4 text-white/60" />
-                <button
-                  onClick={() => window.open("tel:+917024832751", "_self")}
-                  className="text-white/80 hover:text-white transition-colors"
-                >
-                  +91 7024832751
-                </button>
+                  <button
+                    onClick={() => window.open("tel:+917024832751", "_self")}
+                    className="text-white/80 hover:text-white transition-colors"
+                  >
+                    +91 70248 32751
+                  </button>
               </div>
               <div className="flex items-center space-x-2">
                 <Mail className="h-4 w-4 text-white/60" />
@@ -137,13 +137,22 @@ const Footer = () => {
               © 2024 Sankalp Care Connect. All rights reserved.
             </div>
             <div className="flex space-x-6 text-sm">
-              <button className="text-white/70 hover:text-white transition-colors">
+              <button 
+                onClick={() => window.open('/privacy-policy', '_blank')}
+                className="text-white/70 hover:text-white transition-colors"
+              >
                 Privacy Policy
               </button>
-              <button className="text-white/70 hover:text-white transition-colors">
+              <button 
+                onClick={() => window.open('/terms-of-service', '_blank')}
+                className="text-white/70 hover:text-white transition-colors"
+              >
                 Terms of Service
               </button>
-              <button className="text-white/70 hover:text-white transition-colors">
+              <button 
+                onClick={() => window.open('/disclaimer', '_blank')}
+                className="text-white/70 hover:text-white transition-colors"
+              >
                 Disclaimer
               </button>
             </div>

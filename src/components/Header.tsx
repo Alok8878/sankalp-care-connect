@@ -21,7 +21,7 @@ const Header = () => {
             <div className="flex items-center space-x-6">
               <div className="flex items-center space-x-2">
                 <Phone className="h-4 w-4" />
-                <span>+91 7024832751</span>
+                <span>+91 70248 32751</span>
               </div>
               <div className="flex items-center space-x-2">
                 <Clock className="h-4 w-4" />
@@ -44,11 +44,11 @@ const Header = () => {
             <div className="flex items-center space-x-3">
               <img 
                 src="/lovable-uploads/c47ab05b-5664-47f9-8a07-68af5b3c3433.png" 
-                alt="Sankalp Pathology Lab Logo" 
+                alt="Sankalp Care Connect Logo" 
                 className="w-12 h-12 rounded-lg"
               />
               <div>
-                <h1 className="text-xl font-bold text-foreground">Sankalp Pathology Lab</h1>
+                <h1 className="text-xl font-bold text-foreground">Sankalp Care Connect</h1>
                 <p className="text-sm text-foreground-secondary">स्वास्थ्य ही संकल्प है...</p>
               </div>
             </div>

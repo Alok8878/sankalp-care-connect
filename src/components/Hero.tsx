@@ -48,7 +48,7 @@ const Hero = () => {
                 <div className="flex items-center space-x-3">
                   <Phone className="h-5 w-5 text-secondary flex-shrink-0" />
                   <div>
-                    <p className="font-medium text-foreground">+91 7024832751</p>
+                    <p className="font-medium text-foreground">+91 70248 32751</p>
                     <p className="text-sm text-foreground-secondary">Phone & WhatsApp</p>
                   </div>
                 </div>

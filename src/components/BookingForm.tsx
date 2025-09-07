@@ -34,6 +34,7 @@ const BookingForm = () => {
     notes: "",
     consent: false
   });
+  const [errors, setErrors] = useState<Record<string, string>>({});
 
   const { toast } = useToast();
 
@@ -75,13 +76,38 @@ const BookingForm = () => {
     }));
   };
 
+  const validateForm = () => {
+    const newErrors: Record<string, string> = {};
+    
+    if (!formData.fullName.trim()) {
+      newErrors.fullName = "Full name is required";
+    }
+    
+    if (!formData.mobile.trim()) {
+      newErrors.mobile = "Mobile number is required";
+    } else if (!/^[6-9]\d{9}$/.test(formData.mobile.replace(/\D/g, '').slice(-10))) {
+      newErrors.mobile = "Please enter a valid 10-digit mobile number";
+    }
+    
+    if (!formData.testPackage) {
+      newErrors.testPackage = "Please select a service or package";
+    }
+    
+    if (!formData.consent) {
+      newErrors.consent = "Please accept the terms and conditions";
+    }
+    
+    setErrors(newErrors);
+    return Object.keys(newErrors).length === 0;
+  };
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     
-    if (!formData.consent) {
+    if (!validateForm()) {
       toast({
-        title: "Consent Required",
-        description: "Please accept the terms and conditions to proceed.",
+        title: "Please fix the errors",
+        description: "Check the form for any missing or incorrect information.",
         variant: "destructive"
       });
       return;
@@ -155,35 +181,41 @@ const BookingForm = () => {
                   <div className="grid md:grid-cols-2 gap-4">
                     <div>
                       <Label htmlFor="fullName" className="text-foreground font-medium">Full Name *</Label>
-                      <Input
-                        id="fullName"
-                        value={formData.fullName}
-                        onChange={(e) => handleInputChange("fullName", e.target.value)}
-                        required
-                        className="mt-1"
-                        placeholder="Enter your full name"
-                      />
+                        <Input
+                          id="fullName"
+                          value={formData.fullName}
+                          onChange={(e) => handleInputChange("fullName", e.target.value)}
+                          required
+                          className={`mt-1 ${errors.fullName ? 'border-red-500' : ''}`}
+                          placeholder="Enter your full name"
+                        />
+                        {errors.fullName && (
+                          <p className="text-red-500 text-sm mt-1">{errors.fullName}</p>
+                        )}
                     </div>
                     <div>
                       <Label htmlFor="mobile" className="text-foreground font-medium">Mobile Number *</Label>
-                      <Input
-                        id="mobile"
-                        type="tel"
-                        value={formData.mobile}
-                        onChange={(e) => handleInputChange("mobile", e.target.value)}
-                        required
-                        className="mt-1"
-                        placeholder="Enter mobile number"
-                      />
+                        <Input
+                          id="mobile"
+                          type="tel"
+                          value={formData.mobile}
+                          onChange={(e) => handleInputChange("mobile", e.target.value)}
+                          required
+                          className={`mt-1 ${errors.mobile ? 'border-red-500' : ''}`}
+                          placeholder="Enter mobile number"
+                        />
+                        {errors.mobile && (
+                          <p className="text-red-500 text-sm mt-1">{errors.mobile}</p>
+                        )}
                     </div>
                   </div>
 
                   <div>
                     <Label htmlFor="testPackage" className="text-foreground font-medium">Service/Package Selection *</Label>
-                    <Select value={formData.testPackage} onValueChange={(value) => handleInputChange("testPackage", value)}>
-                      <SelectTrigger className="mt-1 h-12 bg-surface border-2 hover:border-primary/50 focus:border-primary transition-colors">
-                        <SelectValue placeholder="Select a service or package" className="text-foreground/70" />
-                      </SelectTrigger>
+                      <Select value={formData.testPackage} onValueChange={(value) => handleInputChange("testPackage", value)}>
+                        <SelectTrigger className={`mt-1 h-12 bg-surface border-2 hover:border-primary/50 focus:border-primary transition-colors ${errors.testPackage ? 'border-red-500' : ''}`}>
+                          <SelectValue placeholder="Select a service or package" className="text-foreground/70" />
+                        </SelectTrigger>
                       <SelectContent className="max-h-60 bg-background border-2 border-border shadow-xl">
                         {testOptions.map((test, index) => (
                           <SelectItem key={index} value={test} className="hover:bg-accent/50 focus:bg-accent cursor-pointer py-3 px-4">
@@ -192,8 +224,11 @@ const BookingForm = () => {
                             </div>
                           </SelectItem>
                         ))}
-                      </SelectContent>
-                    </Select>
+                        </SelectContent>
+                      </Select>
+                      {errors.testPackage && (
+                        <p className="text-red-500 text-sm mt-1">{errors.testPackage}</p>
+                      )}
                   </div>
 
                   <div className="grid md:grid-cols-2 gap-4">
@@ -254,13 +289,16 @@ const BookingForm = () => {
                       id="consent"
                       checked={formData.consent}
                       onCheckedChange={(checked) => handleInputChange("consent", checked as boolean)}
-                      className="mt-1"
+                      className={`mt-1 ${errors.consent ? 'border-red-500' : ''}`}
                     />
                     <Label htmlFor="consent" className="text-sm text-foreground-secondary leading-relaxed">
                       I consent to the collection and processing of my personal and health information for 
                       diagnostic purposes. I understand the terms and conditions of the service.
                     </Label>
                   </div>
+                  {errors.consent && (
+                    <p className="text-red-500 text-sm mt-1">{errors.consent}</p>
+                  )}
 
                   <Button
                     type="submit"
@@ -293,13 +331,13 @@ const BookingForm = () => {
                     <Phone className="h-6 w-6 text-primary" />
                     <div>
                       <p className="font-medium text-foreground">Call Now</p>
-                      <Button 
-                        variant="link" 
-                        className="p-0 h-auto text-primary"
-                        onClick={() => window.open("tel:+917024832751", "_self")}
-                      >
-                        +91 7024832751
-                      </Button>
+                        <Button 
+                          variant="link" 
+                          className="p-0 h-auto text-primary"
+                          onClick={() => window.open("tel:+917024832751", "_self")}
+                        >
+                          +91 70248 32751
+                        </Button>
                     </div>
                   </div>
                   
