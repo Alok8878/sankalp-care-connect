@@ -26,7 +26,7 @@ const Hero = () => {
               <h1 className="text-4xl lg:text-5xl font-bold text-foreground leading-tight">
                 Home Healthcare Services Bhopal –{" "}
                 <span className="bg-gradient-primary bg-clip-text text-transparent">
-                  Sankalp Care Connect
+                  Sankalp Pathology Lab
                 </span>
               </h1>
               <p className="text-xl text-foreground-secondary">
@@ -41,7 +41,7 @@ const Hero = () => {
                 <div className="flex items-start space-x-3">
                   <MapPin className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
                   <div>
-                    <p className="font-medium text-foreground">Sankalp Care Connect</p>
+                    <p className="font-medium text-foreground">Sankalp Pathology Lab</p>
                     <p className="text-foreground-secondary">Ayodhya Bypass, Bhopal, Madhya Pradesh</p>
                   </div>
                 </div>

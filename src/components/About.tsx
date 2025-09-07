@@ -57,12 +57,12 @@ const About = () => {
           <div className="space-y-8">
             <div>
               <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-6">
-                About <span className="bg-gradient-primary bg-clip-text text-transparent">Sankalp Care Connect</span>
+                About <span className="bg-gradient-primary bg-clip-text text-transparent">Sankalp Pathology Lab</span>
               </h2>
               <div className="space-y-4 text-foreground-secondary text-lg leading-relaxed">
                 <p>
                   Established with a vision to provide accessible, reliable, and professional home healthcare services, 
-                  Sankalp Care Connect has been serving the Bhopal community for over 5 years with dedication 
+                  Sankalp Pathology Lab has been serving the Bhopal community for over 5 years with dedication
                   and excellence.
                 </p>
                 <p>

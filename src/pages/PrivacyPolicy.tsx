@@ -22,7 +22,7 @@ const PrivacyPolicy = () => {
             <section>
               <h2 className="text-xl font-semibold text-foreground mb-3">Information We Collect</h2>
               <p className="mb-3">
-                At Sankalp Care Connect, we collect information you provide directly to us, such as when you:
+                At Sankalp Pathology Lab, we collect information you provide directly to us, such as when you:
               </p>
               <ul className="list-disc list-inside space-y-1 ml-4">
                 <li>Book a home healthcare service</li>

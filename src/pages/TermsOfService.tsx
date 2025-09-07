@@ -22,7 +22,7 @@ const TermsOfService = () => {
             <section>
               <h2 className="text-xl font-semibold text-foreground mb-3">Acceptance of Terms</h2>
               <p>
-                By accessing and using Sankalp Care Connect services, you accept and agree to be bound by the terms 
+                By accessing and using Sankalp Pathology Lab services, you accept and agree to be bound by the terms 
                 and provision of this agreement. If you do not agree to abide by the above, please do not use this service.
               </p>
             </section>
@@ -30,7 +30,7 @@ const TermsOfService = () => {
             <section>
               <h2 className="text-xl font-semibold text-foreground mb-3">Service Description</h2>
               <p className="mb-3">
-                Sankalp Care Connect provides home healthcare services including but not limited to:
+                Sankalp Pathology Lab provides home healthcare services including but not limited to:
               </p>
               <ul className="list-disc list-inside space-y-1 ml-4">
                 <li>Home sample collection for diagnostic tests</li>
@@ -74,7 +74,7 @@ const TermsOfService = () => {
             <section>
               <h2 className="text-xl font-semibold text-foreground mb-3">Limitation of Liability</h2>
               <p>
-                Sankalp Care Connect provides healthcare services to the best of our ability. 
+                Sankalp Pathology Lab provides healthcare services to the best of our ability. 
                 However, we are not liable for any indirect, incidental, or consequential damages 
                 arising from the use of our services.
               </p>

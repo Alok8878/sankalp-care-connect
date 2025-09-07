@@ -44,11 +44,11 @@ const Header = () => {
             <div className="flex items-center space-x-3">
               <img 
                 src="/lovable-uploads/c47ab05b-5664-47f9-8a07-68af5b3c3433.png" 
-                alt="Sankalp Care Connect Logo" 
+                alt="Sankalp Pathology Lab Logo" 
                 className="w-12 h-12 rounded-lg"
               />
               <div>
-                <h1 className="text-xl font-bold text-foreground">Sankalp Care Connect</h1>
+                <h1 className="text-xl font-bold text-foreground">Sankalp Pathology Lab</h1>
                 <p className="text-sm text-foreground-secondary">स्वास्थ्य ही संकल्प है...</p>
               </div>
             </div>

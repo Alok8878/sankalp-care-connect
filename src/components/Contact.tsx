@@ -53,7 +53,7 @@ const Contact = () => {
               
               <div className="space-y-4">
                 <div>
-                  <h4 className="font-semibold text-foreground mb-2">Sankalp Care Connect</h4>
+                  <h4 className="font-semibold text-foreground mb-2">Sankalp Pathology Lab</h4>
                   <p className="text-foreground-secondary">
                     Front of, Ganesh Galaxy City<br />
                     Ayodhya Bypass Road, Indus Park, Phase 2<br />
@@ -153,7 +153,7 @@ const Contact = () => {
                   allowFullScreen
                   loading="lazy"
                   referrerPolicy="no-referrer-when-downgrade"
-                  title="Sankalp Care Connect Location"
+                  title="Sankalp Pathology Lab Location"
                 ></iframe>
               </div>
               <div className="mt-4 flex justify-center">

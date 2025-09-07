@@ -22,7 +22,7 @@ const Disclaimer = () => {
             <section>
               <h2 className="text-xl font-semibold text-foreground mb-3">General Medical Disclaimer</h2>
               <p>
-                The information provided by Sankalp Care Connect is for general informational purposes only. 
+                The information provided by Sankalp Pathology Lab is for general informational purposes only. 
                 All information on our website and services is provided in good faith, however we make no 
                 representation or warranty of any kind, express or implied, regarding the accuracy, adequacy, 
                 validity, reliability, availability, or completeness of any information.
@@ -44,7 +44,7 @@ const Disclaimer = () => {
               <h2 className="text-xl font-semibold text-foreground mb-3">Emergency Medical Situations</h2>
               <p>
                 If you think you may have a medical emergency, call your doctor, go to the emergency department, 
-                or call emergency services (108) immediately. Sankalp Care Connect does not recommend or endorse 
+                or call emergency services (108) immediately. Sankalp Pathology Lab does not recommend or endorse 
                 any specific tests, physicians, products, procedures, opinions, or other information that may be 
                 mentioned through our services.
               </p>

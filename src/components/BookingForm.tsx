@@ -116,7 +116,7 @@ const BookingForm = () => {
     setIsSubmitting(true);
 
     // WhatsApp auto-send integration
-    const whatsappMessage = `🏥 *NEW BOOKING - Sankalp Care Connect*
+    const whatsappMessage = `🏥 *NEW BOOKING - Sankalp Pathology Lab*
 
 👤 Name: ${formData.fullName}
 📱 Mobile: ${formData.mobile}

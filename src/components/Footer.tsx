@@ -40,11 +40,11 @@ const Footer = () => {
             <div className="flex items-center space-x-3">
               <img 
                 src="/lovable-uploads/c47ab05b-5664-47f9-8a07-68af5b3c3433.png" 
-                alt="Sankalp Care Connect Logo" 
+                alt="Sankalp Pathology Lab Logo" 
                 className="w-12 h-12 rounded-lg bg-white/20 p-2"
               />
               <div>
-                <h3 className="text-xl font-bold">Sankalp Care Connect</h3>
+                <h3 className="text-xl font-bold">Sankalp Pathology Lab</h3>
                 <p className="text-sm opacity-90">स्वास्थ्य ही संकल्प है...</p>
               </div>
             </div>
@@ -134,7 +134,7 @@ const Footer = () => {
         <div className="border-t border-white/20 mt-12 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <div className="text-white/70 text-sm">
-              © 2024 Sankalp Care Connect. All rights reserved.
+              © 2024 Sankalp Pathology Lab. All rights reserved.
             </div>
             <div className="flex space-x-6 text-sm">
               <button 
