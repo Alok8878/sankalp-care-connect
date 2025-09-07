@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Phone, Clock, MapPin, Menu, X, Calendar } from "lucide-react";
+import { ThemeToggle } from "@/components/theme-toggle";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -88,6 +89,7 @@ const Header = () => {
 
             {/* CTA Buttons */}
             <div className="hidden md:flex items-center space-x-3">
+              <ThemeToggle />
               <Button 
                 className="bg-secondary hover:bg-secondary-hover text-secondary-foreground cta-button pulse-button relative"
                 onClick={() => scrollToSection("booking")}
@@ -141,6 +143,10 @@ const Header = () => {
                   Contact
                 </button>
                 <div className="flex flex-col space-y-2 pt-3 border-t border-border">
+                  <div className="flex items-center justify-between mb-2">
+                    <span className="text-sm text-foreground-secondary">Theme</span>
+                    <ThemeToggle />
+                  </div>
                   <Button 
                     size="sm" 
                     className="bg-secondary hover:bg-secondary-hover text-secondary-foreground"

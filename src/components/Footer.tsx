@@ -25,10 +25,10 @@ const Footer = () => {
   ];
 
   const services = [
-    { name: "Pathology Tests", icon: TestTube },
-    { name: "Digital X-Ray", icon: XRay },
-    { name: "ECG Services", icon: Heart },
-    { name: "Home Collection", icon: Home }
+    { name: "Home Sample Collection", icon: TestTube },
+    { name: "Home Nursing Care", icon: XRay },
+    { name: "Physiotherapy at Home", icon: Heart },
+    { name: "Medical Equipment Rental", icon: Home }
   ];
 
   return (
@@ -40,16 +40,16 @@ const Footer = () => {
             <div className="flex items-center space-x-3">
               <img 
                 src="/lovable-uploads/c47ab05b-5664-47f9-8a07-68af5b3c3433.png" 
-                alt="Sankalp Pathology Lab Logo" 
+                alt="Sankalp Care Connect Logo" 
                 className="w-12 h-12 rounded-lg bg-white/20 p-2"
               />
               <div>
-                <h3 className="text-xl font-bold">Sankalp Pathology Lab</h3>
+                <h3 className="text-xl font-bold">Sankalp Care Connect</h3>
                 <p className="text-sm opacity-90">स्वास्थ्य ही संकल्प है...</p>
               </div>
             </div>
             <p className="text-white/80 leading-relaxed">
-              Providing accurate diagnostic services with advanced technology and 
+              Providing comprehensive home healthcare services with advanced technology and 
               experienced professionals for over 5 years in Bhopal.
             </p>
             <Button 
@@ -58,7 +58,7 @@ const Footer = () => {
               variant="outline"
             >
               <Calendar className="w-4 h-4 mr-2" />
-              Book a Test
+              Book a Service
             </Button>
           </div>
 
@@ -134,7 +134,7 @@ const Footer = () => {
         <div className="border-t border-white/20 mt-12 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <div className="text-white/70 text-sm">
-              © 2024 Sankalp Pathology Lab. All rights reserved.
+              © 2024 Sankalp Care Connect. All rights reserved.
             </div>
             <div className="flex space-x-6 text-sm">
               <button className="text-white/70 hover:text-white transition-colors">
@@ -147,6 +147,11 @@ const Footer = () => {
                 Disclaimer
               </button>
             </div>
+          </div>
+          <div className="mt-4 pt-4 border-t border-white/10 text-center">
+            <p className="text-white/60 text-xs">
+              Website design by <span className="text-white/80 font-medium">Aarna Sharma</span> - <span className="text-white/70">7974496150</span>
+            </p>
           </div>
         </div>
       </div>

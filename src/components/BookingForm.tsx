@@ -27,11 +27,9 @@ const BookingForm = () => {
   const [formData, setFormData] = useState({
     fullName: "",
     mobile: "",
-    email: "",
     testPackage: "",
     preferredDate: "",
     preferredTime: "",
-    doctorName: "",
     address: "",
     notes: "",
     consent: false
@@ -96,11 +94,9 @@ const BookingForm = () => {
 
 👤 Name: ${formData.fullName}
 📱 Mobile: ${formData.mobile}
-📧 Email: ${formData.email}
 🔬 Service: ${formData.testPackage}
 📅 Date: ${formData.preferredDate}
 ⏰ Time: ${formData.preferredTime}
-👨‍⚕️ Doctor: ${formData.doctorName || 'Not specified'}
 📍 Address: ${formData.address || 'Service at clinic'}
 📝 Notes: ${formData.notes || 'None'}`;
 
@@ -122,11 +118,9 @@ const BookingForm = () => {
     setFormData({
       fullName: "",
       mobile: "",
-      email: "",
       testPackage: "",
       preferredDate: "",
       preferredTime: "",
-      doctorName: "",
       address: "",
       notes: "",
       consent: false
@@ -185,31 +179,17 @@ const BookingForm = () => {
                   </div>
 
                   <div>
-                    <Label htmlFor="email" className="text-foreground font-medium">Email Address *</Label>
-                    <Input
-                      id="email"
-                      type="email"
-                      value={formData.email}
-                      onChange={(e) => handleInputChange("email", e.target.value)}
-                      required
-                      className="mt-1"
-                      placeholder="your.email@example.com"
-                    />
-                    <p className="text-xs text-foreground-secondary mt-1">
-                      For automated confirmation and report delivery
-                    </p>
-                  </div>
-
-                  <div>
                     <Label htmlFor="testPackage" className="text-foreground font-medium">Service/Package Selection *</Label>
                     <Select value={formData.testPackage} onValueChange={(value) => handleInputChange("testPackage", value)}>
-                      <SelectTrigger className="mt-1">
-                        <SelectValue placeholder="Select a service or package" />
+                      <SelectTrigger className="mt-1 h-12 bg-surface border-2 hover:border-primary/50 focus:border-primary transition-colors">
+                        <SelectValue placeholder="Select a service or package" className="text-foreground/70" />
                       </SelectTrigger>
-                      <SelectContent>
+                      <SelectContent className="max-h-60 bg-background border-2 border-border shadow-xl">
                         {testOptions.map((test, index) => (
-                          <SelectItem key={index} value={test}>
-                            {test}
+                          <SelectItem key={index} value={test} className="hover:bg-accent/50 focus:bg-accent cursor-pointer py-3 px-4">
+                            <div className="flex items-center justify-between w-full">
+                              <span className="font-medium">{test}</span>
+                            </div>
                           </SelectItem>
                         ))}
                       </SelectContent>
@@ -246,17 +226,6 @@ const BookingForm = () => {
                   </div>
 
                   <div>
-                    <Label htmlFor="doctorName" className="text-foreground font-medium">Doctor's Name (Optional)</Label>
-                    <Input
-                      id="doctorName"
-                      value={formData.doctorName}
-                      onChange={(e) => handleInputChange("doctorName", e.target.value)}
-                      className="mt-1"
-                      placeholder="Referring doctor's name"
-                    />
-                  </div>
-
-                  <div>
                     <Label htmlFor="address" className="text-foreground font-medium">Service Address</Label>
                     <Textarea
                       id="address"
@@ -266,20 +235,6 @@ const BookingForm = () => {
                       placeholder="Complete address for home service delivery"
                       rows={3}
                     />
-                  </div>
-
-                  <div>
-                    <Label className="text-foreground font-medium">Document Upload</Label>
-                    <div className="mt-1 border-2 border-dashed border-border rounded-lg p-6 text-center hover:border-primary transition-colors">
-                      <Upload className="h-8 w-8 text-foreground-muted mx-auto mb-2" />
-                      <p className="text-foreground-secondary">
-                        Drag and drop your documents here, or{" "}
-                        <span className="text-primary cursor-pointer hover:underline">browse</span>
-                      </p>
-                      <p className="text-xs text-foreground-muted mt-1">
-                        Supported formats: JPG, PNG, PDF (Max 5MB)
-                      </p>
-                    </div>
                   </div>
 
                   <div>
