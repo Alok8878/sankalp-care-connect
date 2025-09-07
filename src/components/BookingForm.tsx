@@ -359,29 +359,6 @@ const BookingForm = () => {
                 </div>
               </Card>
 
-              <Card className="p-6">
-                <h3 className="text-lg font-semibold text-foreground mb-4">Email Confirmation</h3>
-                <div className="space-y-3">
-                  <div className="flex items-start space-x-2">
-                    <CheckCircle className="h-4 w-4 text-secondary mt-0.5" />
-                    <p className="text-sm text-foreground-secondary">
-                      Instant booking confirmation via WhatsApp
-                    </p>
-                  </div>
-                  <div className="flex items-start space-x-2">
-                    <CheckCircle className="h-4 w-4 text-secondary mt-0.5" />
-                    <p className="text-sm text-foreground-secondary">
-                      Service reminders before appointment
-                    </p>
-                  </div>
-                  <div className="flex items-start space-x-2">
-                    <CheckCircle className="h-4 w-4 text-secondary mt-0.5" />
-                    <p className="text-sm text-foreground-secondary">
-                      Digital service reports and updates
-                    </p>
-                  </div>
-                </div>
-              </Card>
             </div>
           </div>
         </div>

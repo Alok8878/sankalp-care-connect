@@ -146,18 +146,84 @@ All colors MUST be HSL. Semantic tokens for consistent theming.
 
 /* Modern Animations & Effects */
 @layer components {
-  /* WhatsApp Bubble */
+  /* WhatsApp Bubble - Mobile Optimized */
   .whatsapp-bubble {
     animation: bounce 2s infinite;
     position: fixed;
     bottom: 20px;
     right: 20px;
     z-index: 1000;
+    transition: all 0.3s ease;
   }
 
   .whatsapp-bubble:hover {
     animation: none;
     transform: scale(1.1);
+  }
+
+  /* Mobile responsive adjustments */
+  @media (max-width: 768px) {
+    .whatsapp-bubble {
+      bottom: 15px;
+      right: 15px;
+      transform: scale(0.9);
+    }
+  }
+
+  /* Mobile-first responsive containers */
+  .mobile-container {
+    @apply px-4 mx-auto max-w-7xl;
+  }
+
+  @media (min-width: 640px) {
+    .mobile-container {
+      @apply px-6;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .mobile-container {
+      @apply px-8;
+    }
+  }
+
+  /* Mobile-optimized text sizing */
+  .responsive-heading {
+    @apply text-2xl font-bold leading-tight;
+  }
+
+  @media (min-width: 640px) {
+    .responsive-heading {
+      @apply text-3xl;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .responsive-heading {
+      @apply text-4xl;
+    }
+  }
+
+  /* Mobile-friendly cards */
+  .mobile-card {
+    @apply p-4 rounded-lg shadow-md;
+  }
+
+  @media (min-width: 768px) {
+    .mobile-card {
+      @apply p-6;
+    }
+  }
+
+  /* Touch-friendly buttons */
+  .touch-button {
+    @apply min-h-[44px] px-6 py-3 text-base font-medium rounded-lg transition-all duration-200;
+  }
+
+  @media (max-width: 768px) {
+    .touch-button {
+      @apply min-h-[48px] px-4 py-3 text-sm;
+    }
   }
 
   /* Package Card Animations */
