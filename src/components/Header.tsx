@@ -91,11 +91,11 @@ const Header = () => {
             <div className="hidden md:flex items-center space-x-3">
               <ThemeToggle />
               <Button 
-                className="bg-secondary hover:bg-secondary-hover text-secondary-foreground cta-button pulse-button relative"
+                className="bg-secondary hover:bg-secondary-hover text-secondary-foreground cta-button pulse-button relative font-semibold tracking-wide"
                 onClick={() => scrollToSection("booking")}
               >
                 <Calendar className="w-4 h-4 mr-2" />
-                Book a Test
+                Book Your Service
               </Button>
             </div>
 
@@ -149,11 +149,11 @@ const Header = () => {
                   </div>
                   <Button 
                     size="sm" 
-                    className="bg-secondary hover:bg-secondary-hover text-secondary-foreground"
+                    className="bg-secondary hover:bg-secondary-hover text-secondary-foreground font-semibold tracking-wide"
                     onClick={() => scrollToSection("booking")}
                   >
                     <Calendar className="w-4 h-4 mr-2" />
-                    Book a Test
+                    Book Your Service
                   </Button>
                 </div>
               </div>
