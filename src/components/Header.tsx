@@ -95,7 +95,7 @@ const Header = () => {
                 onClick={() => scrollToSection("booking")}
               >
                 <Calendar className="w-4 h-4 mr-2" />
-                Book Your Service
+                Book Health Checkup Now
               </Button>
             </div>
 
@@ -153,7 +153,7 @@ const Header = () => {
                     onClick={() => scrollToSection("booking")}
                   >
                     <Calendar className="w-4 h-4 mr-2" />
-                    Book Your Service
+                    Book Health Checkup Now
                   </Button>
                 </div>
               </div>

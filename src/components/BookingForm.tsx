@@ -161,7 +161,7 @@ const BookingForm = () => {
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-4">
-              <span className="bg-gradient-primary bg-clip-text text-transparent">Book Your Service</span>
+              <span className="bg-gradient-primary bg-clip-text text-transparent">Book Health Checkup Now</span>
             </h2>
             <p className="text-xl text-foreground-secondary">
               Schedule your home healthcare service easily and get professional care at your doorstep
