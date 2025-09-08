@@ -87,7 +87,7 @@ const HealthPackages = () => {
             Health Packages
           </div>
           <h2 className="text-3xl lg:text-5xl font-bold text-foreground mb-6">
-            Home Healthcare <span className="medical-gradient-text">Packages</span>
+            Home Healthcare <span className="bg-gradient-to-r from-medical-blue to-medical-green bg-clip-text text-transparent">Packages</span>
           </h2>
           <p className="text-lg text-foreground-secondary max-w-3xl mx-auto">
             Comprehensive diagnostic packages designed for your health needs, delivered with professional care at your doorstep
