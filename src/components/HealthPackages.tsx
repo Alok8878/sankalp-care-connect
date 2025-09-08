@@ -5,72 +5,71 @@ import { CheckCircle, Star, Calendar, Home, Users, Heart } from "lucide-react";
 const HealthPackages = () => {
   const packages = [
     {
-      name: "Home Wellness Check",
-      currentPrice: 1299,
-      originalPrice: 1800,
-      description: "Essential health screening at your home comfort",
+      name: "Blood Tests Package",
+      currentPrice: 800,
+      originalPrice: 1600,
+      description: "Essential blood tests with home collection service",
       icon: Home,
       features: [
-        "Home sample collection",
-        "Complete Blood Count (CBC)",
-        "Blood Sugar & HbA1c",
-        "Lipid Profile assessment",
-        "Kidney Function Test",
-        "Digital report delivery"
+        "Complete Blood Count (CBC) - ₹200",
+        "Lipid Profile - ₹450",
+        "Liver Function Test - ₹500",
+        "Kidney Function Test - ₹450",
+        "Home collection included",
+        "Digital report within 2 hours"
       ],
-      fasting: "10-12 hours",
+      fasting: "10 hours fasting required",
       popular: false
     },
     {
-      name: "Complete Home Care Package",
-      currentPrice: 2999,
-      originalPrice: 4500,
-      description: "Most comprehensive home healthcare service",
+      name: "Specialized Tests",
+      currentPrice: 1200,
+      originalPrice: 2400,
+      description: "Advanced diagnostic tests for specific conditions",
       icon: Users,
       features: [
-        "All Home Wellness tests",
-        "Home nursing consultation",
-        "Physiotherapy assessment",
-        "Thyroid & Vitamin profile",
-        "Cardiac risk evaluation",
-        "Monthly health monitoring",
-        "24/7 teleconsultation access",
-        "Medical equipment on rent"
+        "Thyroid Function Test - ₹500",
+        "Diabetes Panel - ₹700",
+        "Cardiac Risk Assessment - ₹1200",
+        "Sample collection at home",
+        "Reports via email/WhatsApp",
+        "Expert consultation included"
       ],
-      fasting: "10-12 hours",
+      fasting: "No fasting required",
       popular: true
     },
     {
-      name: "Senior Care at Home",
-      currentPrice: 2199,
-      originalPrice: 3200,
-      description: "Specialized healthcare package for elderly",
+      name: "Infection Screening",
+      currentPrice: 900,
+      originalPrice: 2200,
+      description: "Comprehensive infection and disease screening",
       icon: Heart,
       features: [
-        "Comprehensive health screening",
-        "Diabetes & BP monitoring",
-        "Mobility assessment",
-        "Home nursing visits (2)",
-        "Medicine management guidance",
-        "Emergency response planning"
+        "COVID-19 RT-PCR - ₹900",
+        "Hepatitis Panel - ₹900", 
+        "HIV Testing - ₹400",
+        "Confidential testing process",
+        "Secure report delivery",
+        "Home sample collection"
       ],
-      fasting: "8-10 hours",
+      fasting: "No fasting required",
       popular: false
     },
     {
-      name: "Basic Home Service",
-      currentPrice: 699,
-      originalPrice: 999,
-      description: "Starter home healthcare package",
-      icon: Home,
+      name: "Comprehensive Health Packages",
+      currentPrice: 1500,
+      originalPrice: 3700,
+      description: "Complete health assessment packages",
+      icon: Users,
       features: [
-        "Home sample collection",
-        "Basic blood tests (CBC)",
-        "Blood sugar monitoring", 
-        "Blood pressure check",
-        "Digital report delivery"
+        "Basic Health Checkup - ₹1000 (25+ tests)",
+        "Executive Health Package - ₹1500 (50+ tests)", 
+        "Senior Citizen Package - ₹1200 (40+ tests)",
+        "Complete health assessment",
+        "Doctor consultation included",
+        "Detailed health report"
       ],
-      fasting: "No fasting required",
+      fasting: "8-12 hours recommended",
       popular: false
     }
   ];
