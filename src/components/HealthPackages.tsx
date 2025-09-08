@@ -82,22 +82,22 @@ const HealthPackages = () => {
   return (
     <section id="packages" className="py-16 lg:py-24 bg-gradient-to-br from-medical-blue-light to-medical-green-light">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-4">
+        <div className="text-center mb-8 sm:mb-12">
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-foreground mb-4">
             Home Healthcare <span className="bg-gradient-primary bg-clip-text text-transparent">Packages</span>
           </h2>
-          <p className="text-xl text-foreground-secondary max-w-2xl mx-auto">
+          <p className="text-base sm:text-lg lg:text-xl text-foreground-secondary max-w-2xl mx-auto px-4">
             Comprehensive home healthcare packages designed for different needs and delivered at your doorstep
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
           {packages.map((pkg, index) => {
             const IconComponent = pkg.icon;
             return (
               <Card 
                 key={index} 
-                className={`package-card p-6 relative hover:shadow-xl transition-all duration-300 hover:-translate-y-2 stagger-item ${
+                className={`package-card p-4 sm:p-6 relative hover:shadow-xl transition-all duration-300 hover:-translate-y-2 stagger-item ${
                   pkg.popular 
                     ? "bg-white border-2 border-primary shadow-lg" 
                     : "bg-white/90 backdrop-blur-sm"
@@ -113,20 +113,20 @@ const HealthPackages = () => {
                 )}
 
                 <div className="space-y-4">
-                  <div className="flex items-center space-x-3 mb-3">
-                    <div className="w-10 h-10 bg-gradient-primary rounded-lg flex items-center justify-center">
-                      <IconComponent className="h-5 w-5 text-white" />
+                  <div className="flex items-center space-x-2 sm:space-x-3 mb-3">
+                    <div className="w-8 sm:w-10 h-8 sm:h-10 bg-gradient-primary rounded-lg flex items-center justify-center flex-shrink-0">
+                      <IconComponent className="h-4 sm:h-5 w-4 sm:w-5 text-white" />
                     </div>
                     <div>
-                      <h3 className="text-xl font-bold text-foreground">{pkg.name}</h3>
+                      <h3 className="text-lg sm:text-xl font-bold text-foreground leading-tight">{pkg.name}</h3>
                     </div>
                   </div>
                   
                   <p className="text-sm text-foreground-secondary">{pkg.description}</p>
 
                   <div className="flex items-baseline space-x-2">
-                    <span className="text-3xl font-bold text-secondary">₹{pkg.currentPrice}</span>
-                    <span className="text-lg text-foreground-muted line-through">₹{pkg.originalPrice}</span>
+                    <span className="text-2xl sm:text-3xl font-bold text-secondary">₹{pkg.currentPrice}</span>
+                    <span className="text-base sm:text-lg text-foreground-muted line-through">₹{pkg.originalPrice}</span>
                   </div>
 
                   <div className="text-sm text-foreground-secondary">
@@ -167,9 +167,9 @@ const HealthPackages = () => {
           })}
         </div>
 
-        <div className="mt-8 text-center">
-          <Card className="p-6 bg-white/80 backdrop-blur-sm max-w-2xl mx-auto">
-            <p className="text-foreground-secondary text-sm">
+        <div className="mt-6 sm:mt-8 text-center">
+          <Card className="p-4 sm:p-6 bg-white/80 backdrop-blur-sm max-w-2xl mx-auto">
+            <p className="text-foreground-secondary text-xs sm:text-sm">
               <span className="font-medium text-foreground">Note:</span> Service packages can be customized per your healthcare needs. 
               All services delivered at your home. Digital reports and consultations available 24/7.
             </p>

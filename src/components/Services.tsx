@@ -332,33 +332,34 @@ const Services = () => {
   return (
     <section id="services" className="py-16 lg:py-24 bg-background">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-4">
+        <div className="text-center mb-8 sm:mb-12">
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-foreground mb-4">
             Our <span className="bg-gradient-primary bg-clip-text text-transparent">Home Healthcare Services</span>
           </h2>
-          <p className="text-xl text-foreground-secondary max-w-2xl mx-auto">
+          <p className="text-base sm:text-lg lg:text-xl text-foreground-secondary max-w-2xl mx-auto px-4">
             Comprehensive healthcare services delivered to your doorstep with professional care and modern technology
           </p>
         </div>
 
         {/* Tab Navigation */}
-        <div className="flex flex-wrap justify-center gap-4 mb-12">
+        <div className="flex flex-wrap justify-center gap-2 sm:gap-3 md:gap-4 mb-8 sm:mb-12 px-2">
           {tabs.map((tab) => {
             const IconComponent = tab.icon;
             return (
               <Button
                 key={tab.id}
                 variant={activeTab === tab.id ? "default" : "outline"}
-                size="lg"
+                size="sm"
                 onClick={() => setActiveTab(tab.id)}
-                className={`px-6 py-3 ${
+                className={`px-3 sm:px-4 md:px-6 py-2 sm:py-3 text-xs sm:text-sm md:text-base touch-button ${
                   activeTab === tab.id 
                     ? "bg-primary hover:bg-primary-hover text-primary-foreground" 
                     : "border-border text-foreground hover:bg-accent"
                 }`}
               >
-                <IconComponent className="w-5 h-5 mr-2" />
-                {tab.label}
+                <IconComponent className="w-3 sm:w-4 md:w-5 h-3 sm:h-4 md:h-5 mr-1 sm:mr-2" />
+                <span className="hidden sm:inline">{tab.label}</span>
+                <span className="sm:hidden">{tab.label.split(' ')[0]}</span>
               </Button>
             );
           })}

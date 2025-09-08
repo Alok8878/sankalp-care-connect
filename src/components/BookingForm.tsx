@@ -156,29 +156,29 @@ const BookingForm = () => {
   };
 
   return (
-    <section id="booking" className="py-16 lg:py-24 bg-background">
-      <div className="container mx-auto px-4">
+    <section id="booking" className="py-12 sm:py-16 lg:py-24 bg-background">
+      <div className="container mx-auto px-4 sm:px-6">
         <div className="max-w-4xl mx-auto">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-4">
+          <div className="text-center mb-8 sm:mb-12">
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-foreground mb-4">
               <span className="bg-gradient-primary bg-clip-text text-transparent">Book Health Checkup Now</span>
             </h2>
-            <p className="text-xl text-foreground-secondary">
+            <p className="text-base sm:text-xl text-foreground-secondary px-4">
               Schedule your home healthcare service easily and get professional care at your doorstep
             </p>
           </div>
 
-          <div className="grid lg:grid-cols-3 gap-8">
+          <div className="grid lg:grid-cols-3 gap-6 sm:gap-8">
             {/* Booking Form */}
-            <div className="lg:col-span-2">
-              <Card className="p-8">
-                <div className="bg-gradient-primary text-white p-4 rounded-lg mb-6">
-                  <h3 className="text-xl font-semibold">Online Booking Form</h3>
-                  <p className="text-sm opacity-90">Fill out the form below to book your home healthcare service</p>
+            <div className="lg:col-span-2 order-2 lg:order-1">
+              <Card className="p-4 sm:p-6 lg:p-8">
+                <div className="bg-gradient-primary text-white p-3 sm:p-4 rounded-lg mb-4 sm:mb-6">
+                  <h3 className="text-lg sm:text-xl font-semibold">Online Booking Form</h3>
+                  <p className="text-xs sm:text-sm opacity-90">Fill out the form below to book your home healthcare service</p>
                 </div>
 
-                <form onSubmit={handleSubmit} className="space-y-6">
-                  <div className="grid md:grid-cols-2 gap-4">
+                <form onSubmit={handleSubmit} className="mobile-form">
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-3 sm:gap-4">
                     <div>
                       <Label htmlFor="fullName" className="text-foreground font-medium">Full Name *</Label>
                         <Input
@@ -300,12 +300,12 @@ const BookingForm = () => {
                     <p className="text-red-500 text-sm mt-1">{errors.consent}</p>
                   )}
 
-                  <Button
-                    type="submit"
-                    size="lg"
-                    disabled={isSubmitting}
-                    className="w-full bg-secondary hover:bg-secondary-hover text-secondary-foreground"
-                  >
+                    <Button
+                      type="submit"
+                      size="lg"
+                      disabled={isSubmitting}
+                      className="w-full bg-secondary hover:bg-secondary-hover text-secondary-foreground touch-button"
+                    >
                     {isSubmitting ? (
                       <>
                         <div className="animate-spin rounded-full h-4 w-4 border-b-2 border-white mr-2" />
@@ -323,17 +323,17 @@ const BookingForm = () => {
             </div>
 
             {/* Quick Action Cards */}
-            <div className="space-y-6">
-              <Card className="p-6 bg-gradient-accent">
-                <h3 className="text-lg font-semibold text-foreground mb-4">Quick Actions</h3>
-                <div className="space-y-4">
-                  <div className="flex items-center space-x-3 p-3 bg-white rounded-lg">
-                    <Phone className="h-6 w-6 text-primary" />
-                    <div>
-                      <p className="font-medium text-foreground">Call Now</p>
+            <div className="space-y-4 sm:space-y-6 order-1 lg:order-2">
+              <Card className="p-4 sm:p-6 bg-gradient-accent">
+                <h3 className="text-base sm:text-lg font-semibold text-foreground mb-3 sm:mb-4">Quick Actions</h3>
+                <div className="space-y-3 sm:space-y-4">
+                  <div className="flex items-center space-x-3 p-2 sm:p-3 bg-white rounded-lg touch-button">
+                    <Phone className="h-5 sm:h-6 w-5 sm:w-6 text-primary flex-shrink-0" />
+                    <div className="min-w-0">
+                      <p className="font-medium text-foreground text-sm sm:text-base">Call Now</p>
                         <Button 
                           variant="link" 
-                          className="p-0 h-auto text-primary"
+                          className="p-0 h-auto text-primary text-sm sm:text-base"
                           onClick={() => window.open("tel:+917024832751", "_self")}
                         >
                           +91 70248 32751
@@ -341,19 +341,19 @@ const BookingForm = () => {
                     </div>
                   </div>
                   
-                  <div className="flex items-center space-x-3 p-3 bg-white rounded-lg">
-                    <MapPin className="h-6 w-6 text-secondary" />
+                  <div className="flex items-center space-x-3 p-2 sm:p-3 bg-white rounded-lg">
+                    <MapPin className="h-5 sm:h-6 w-5 sm:w-6 text-secondary flex-shrink-0" />
                     <div>
-                      <p className="font-medium text-foreground">Walk-in</p>
-                      <p className="text-sm text-foreground-secondary">No appointment needed</p>
+                      <p className="font-medium text-foreground text-sm sm:text-base">Walk-in</p>
+                      <p className="text-xs sm:text-sm text-foreground-secondary">No appointment needed</p>
                     </div>
                   </div>
                   
-                  <div className="flex items-center space-x-3 p-3 bg-white rounded-lg">
-                    <Clock className="h-6 w-6 text-medical-blue" />
+                  <div className="flex items-center space-x-3 p-2 sm:p-3 bg-white rounded-lg">
+                    <Clock className="h-5 sm:h-6 w-5 sm:w-6 text-medical-blue flex-shrink-0" />
                     <div>
-                      <p className="font-medium text-foreground">Quick Response</p>
-                      <p className="text-sm text-foreground-secondary">2hr response time</p>
+                      <p className="font-medium text-foreground text-sm sm:text-base">Quick Response</p>
+                      <p className="text-xs sm:text-sm text-foreground-secondary">2hr response time</p>
                     </div>
                   </div>
                 </div>
