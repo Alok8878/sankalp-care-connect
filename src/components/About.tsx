@@ -50,43 +50,44 @@ const About = () => {
   ];
 
   return (
-    <section id="about" className="py-16 lg:py-24 bg-gradient-to-br from-medical-blue-light to-medical-green-light">
+    <section id="about" className="py-16 lg:py-24 bg-gradient-to-b from-background to-surface/30" aria-labelledby="about-heading">
       <div className="container mx-auto px-4">
+        <div className="text-center mb-12">
+          <h2 id="about-heading" className="text-3xl lg:text-4xl font-bold text-foreground mb-4">
+            About <span className="bg-gradient-primary bg-clip-text text-transparent">Sankalp Pathology</span>
+          </h2>
+          <p className="text-xl text-foreground-secondary max-w-3xl mx-auto" role="description">
+            Established pathology laboratory and healthcare service provider in Bhopal, Madhya Pradesh. We specialize in comprehensive diagnostic testing, home sample collection, professional nursing care, physiotherapy services, and teleconsultation. Our mission is to provide accurate, reliable, and accessible healthcare services with patient comfort as our priority.
+          </p>
+        </div>
+        
         <div className="grid lg:grid-cols-2 gap-12 items-start">
           {/* Left Column - Mission & Description */}
           <div className="space-y-8">
             <div>
-              <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-6">
-                About <span className="bg-gradient-primary bg-clip-text text-transparent">Sankalp Pathology Lab</span>
-              </h2>
+              <h3 className="text-2xl lg:text-3xl font-semibold text-foreground mb-6">Our Healthcare Mission</h3>
               <div className="space-y-4 text-foreground-secondary text-lg leading-relaxed">
                 <p>
-                  Established with a vision to provide accessible, reliable, and professional home healthcare services, 
-                  Sankalp Pathology Lab has been serving the Bhopal community for over 5 years with dedication
-                  and excellence.
+                  <strong>Established in 2019</strong>, Sankalp Pathology Lab has been serving the Bhopal community with dedication and excellence for over 5 years. We provide comprehensive home healthcare services including pathology tests, sample collection, nursing care, physiotherapy, medical equipment rental, and teleconsultation services.
                 </p>
                 <p>
-                  Our comprehensive home healthcare services combine experienced medical professionals with 
-                  advanced diagnostic technology to deliver quality care at your doorstep. From sample collection 
-                  to nursing care, we ensure your health needs are met with utmost care and convenience.
+                  Our comprehensive home healthcare services combine experienced medical professionals with advanced diagnostic technology to deliver quality care at your doorstep. From blood sample collection to post-operative nursing care, we ensure your health needs are met with utmost care and convenience across Bhopal and surrounding areas.
                 </p>
                 <p>
-                  We believe that quality healthcare should be accessible to everyone, which is why we offer 
-                  transparent pricing, doorstep services, and maintain the highest standards of 
-                  patient care and safety in the comfort of your home.
+                  We believe that quality healthcare should be accessible to everyone, which is why we offer transparent pricing, doorstep services, and maintain the highest standards of patient care and safety in the comfort of your home. Our services include diagnostic tests (CBC, Lipid Profile, Thyroid tests), specialized screening, health packages, and professional healthcare support.
                 </p>
               </div>
             </div>
 
             {/* Core Values */}
             <div>
-              <h3 className="text-2xl font-semibold text-foreground mb-4">Our Core Values</h3>
-              <div className="grid grid-cols-1 gap-3">
+              <h3 className="text-2xl font-semibold text-foreground mb-4">Our Core Values & Standards</h3>
+              <div className="grid grid-cols-1 gap-3" role="list" aria-label="Core values and healthcare standards">
                 {values.map((value, index) => {
                   const IconComponent = value.icon;
                   return (
-                    <div key={index} className="flex items-center space-x-3">
-                      <div className="w-8 h-8 bg-gradient-primary rounded-full flex items-center justify-center flex-shrink-0">
+                    <div key={index} className="flex items-center space-x-3" role="listitem">
+                      <div className="w-8 h-8 bg-gradient-primary rounded-full flex items-center justify-center flex-shrink-0" aria-hidden="true">
                         <IconComponent className="h-4 w-4 text-white" />
                       </div>
                       <span className="text-foreground font-medium">{value.text}</span>
@@ -98,7 +99,7 @@ const About = () => {
           </div>
 
           {/* Right Column - Stats */}
-          <div className="grid grid-cols-2 gap-6">
+          <div className="grid grid-cols-2 gap-6" role="region" aria-label="Company statistics and achievements">
             {stats.map((stat, index) => {
               const IconComponent = stat.icon;
               return (
@@ -107,7 +108,7 @@ const About = () => {
                   className="p-6 text-center hover:shadow-lg transition-all duration-300 bg-white/80 backdrop-blur-sm"
                 >
                   <div className="flex flex-col items-center space-y-3">
-                    <div className="w-12 h-12 bg-gradient-primary rounded-lg flex items-center justify-center">
+                    <div className="w-12 h-12 bg-gradient-primary rounded-lg flex items-center justify-center" aria-hidden="true">
                       <IconComponent className="h-6 w-6 text-white" />
                     </div>
                     <div className="space-y-1">

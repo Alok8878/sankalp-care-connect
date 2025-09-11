@@ -14,15 +14,46 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-background">
       <Header />
-      <main>
-        <Hero />
-        <WhyChooseUs />
-        <About />
-        <Services />
-        <HealthPackages />
-        <BookingForm />
-        <FAQ />
-        <Contact />
+      <main role="main" aria-label="Main content">
+        {/* Hero Section - Primary Information */}
+        <section aria-labelledby="hero-heading">
+          <Hero />
+        </section>
+        
+        {/* Key Features Section */}
+        <section aria-labelledby="features-heading">
+          <WhyChooseUs />
+        </section>
+        
+        {/* About Company Section */}
+        <section aria-labelledby="about-heading">
+          <About />
+        </section>
+        
+        {/* Healthcare Services Section */}
+        <section aria-labelledby="services-heading">
+          <Services />
+        </section>
+        
+        {/* Health Packages and Pricing */}
+        <section aria-labelledby="packages-heading">
+          <HealthPackages />
+        </section>
+        
+        {/* Booking and Contact Form */}
+        <section aria-labelledby="booking-heading">
+          <BookingForm />
+        </section>
+        
+        {/* Frequently Asked Questions */}
+        <section aria-labelledby="faq-heading">
+          <FAQ />
+        </section>
+        
+        {/* Contact Information and Location */}
+        <section aria-labelledby="contact-heading">
+          <Contact />
+        </section>
       </main>
       <Footer />
       <WhatsAppWidget />

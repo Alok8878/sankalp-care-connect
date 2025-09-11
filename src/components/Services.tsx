@@ -330,14 +330,14 @@ const Services = () => {
   };
 
   return (
-    <section id="services" className="py-16 lg:py-24 bg-background">
+    <section id="services" className="py-16 lg:py-24 bg-background" aria-labelledby="services-heading">
       <div className="container mx-auto px-4">
         <div className="text-center mb-8 sm:mb-12">
-          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-foreground mb-4">
+          <h2 id="services-heading" className="text-2xl sm:text-3xl lg:text-4xl font-bold text-foreground mb-4">
             Our <span className="bg-gradient-primary bg-clip-text text-transparent">Home Healthcare Services</span>
           </h2>
-          <p className="text-base sm:text-lg lg:text-xl text-foreground-secondary max-w-2xl mx-auto px-4">
-            Comprehensive healthcare services delivered to your doorstep with professional care and modern technology
+          <p className="text-base sm:text-lg lg:text-xl text-foreground-secondary max-w-2xl mx-auto px-4" role="description">
+            Comprehensive healthcare services delivered to your doorstep in Bhopal. Professional sample collection, nursing care, physiotherapy, medical equipment rental, and teleconsultation services with qualified healthcare professionals and modern medical technology.
           </p>
         </div>
 

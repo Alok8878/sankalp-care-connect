@@ -74,21 +74,21 @@ const HealthPackages = () => {
   };
 
   return (
-    <section id="packages" className="py-16 lg:py-20 bg-gradient-to-b from-background via-medical-blue/3 to-medical-green/5">
+    <section id="packages" className="py-16 lg:py-20 bg-gradient-to-b from-background via-medical-blue/3 to-medical-green/5" aria-labelledby="packages-heading">
       <div className="mobile-container">
         <div className="text-center mb-12 lg:mb-16">
           <div className="inline-flex items-center gap-2 bg-gradient-to-r from-medical-blue/15 to-medical-green/15 text-medical-blue px-6 py-3 rounded-full text-sm font-semibold mb-6 border border-medical-blue/20">
             <Heart className="w-5 h-5" />
             Professional Health Services
           </div>
-          <h2 className="text-4xl lg:text-6xl font-bold mb-6">
+          <h2 id="packages-heading" className="text-4xl lg:text-6xl font-bold mb-6">
             <span className="text-foreground">Home Healthcare </span>
             <span className="bg-gradient-to-r from-medical-blue via-medical-green to-medical-purple bg-clip-text text-transparent font-extrabold">
               Packages
             </span>
           </h2>
-          <p className="text-xl text-foreground-secondary max-w-4xl mx-auto leading-relaxed">
-            Professional diagnostic services delivered to your doorstep with expert care and fast, reliable results
+          <p className="text-xl text-foreground-secondary max-w-4xl mx-auto leading-relaxed" role="description">
+            Professional diagnostic services and health packages delivered to your doorstep in Bhopal. Comprehensive blood tests, specialized diagnostics, infection screening, and complete health checkups with home sample collection, fast digital reports, and expert medical consultation.
           </p>
         </div>
 

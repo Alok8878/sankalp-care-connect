@@ -31,14 +31,14 @@ const Contact = () => {
   ];
 
   return (
-    <section id="contact" className="py-16 lg:py-24 bg-background">
+    <section id="contact" className="py-16 lg:py-24 bg-background" aria-labelledby="contact-heading">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
-          <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-4">
+          <h2 id="contact-heading" className="text-3xl lg:text-4xl font-bold text-foreground mb-4">
             Contact & <span className="bg-gradient-primary bg-clip-text text-transparent">Location</span>
           </h2>
-          <p className="text-xl text-foreground-secondary">
-            Get in touch for home healthcare services or visit our main office
+          <p className="text-xl text-foreground-secondary" role="description">
+            Contact Sankalp Pathology Lab for home healthcare services in Bhopal. Visit our laboratory at Ganesh Galaxy City, Ayodhya Bypass Road for diagnostic tests, consultations, and healthcare services. Call +91 70248 32751 for appointments.
           </p>
         </div>
 

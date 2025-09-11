@@ -32,37 +32,30 @@
     <meta property="twitter:description" content="Professional pathology lab and home healthcare services including sample collection, diagnostic tests, nursing, physiotherapy. Serving Bhopal with quality care at your doorstep." />
     <meta property="twitter:image" content="https://sankalp-pathology-lab.lovable.app/lovable-uploads/c47ab05b-5664-47f9-8a07-68af5b3c3433.png" />
 
-    <!-- Structured Data -->
-    <script type="application/ld+json">
+  <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "MedicalOrganization",
       "name": "Sankalp Pathology Lab",
-      "alternateName": "स्वास्थ्य ही संकल्प है",
-      "description": "Professional pathology lab and home healthcare services in Bhopal including diagnostic tests, sample collection, nursing care, physiotherapy and medical equipment rental",
-      "url": "https://sankalp-pathology-lab.lovable.app",
-      "logo": "https://sankalp-pathology-lab.lovable.app/lovable-uploads/c47ab05b-5664-47f9-8a07-68af5b3c3433.png",
-      "image": "https://sankalp-pathology-lab.lovable.app/lovable-uploads/c47ab05b-5664-47f9-8a07-68af5b3c3433.png",
-      "telephone": "+91-70248-32751",
+      "alternateName": "Sankalp Care Connect",
+      "description": "Professional pathology services, home healthcare, nursing care, physiotherapy, and teleconsultation services in Bhopal, Madhya Pradesh. We provide comprehensive diagnostic tests, blood sample collection at home, health packages, and medical equipment rental.",
+      "url": "https://sankalppathology.com",
+      "logo": "https://sankalppathology.com/favicon.ico", 
+      "image": "https://sankalppathology.com/og-image.jpg",
+      "telephone": "+917024832751",
       "email": "sankalppathologylab@gmail.com",
-      "contactPoint": {
-        "@type": "ContactPoint",
-        "telephone": "+91-70248-32751",
-        "contactType": "customer service",
-        "availableLanguage": ["English", "Hindi"]
-      },
       "address": {
         "@type": "PostalAddress",
-        "streetAddress": "Front of, Ganesh Galaxy City, Ayodhya Bypass Road, Indus Park, Phase 2",
+        "streetAddress": "Front of Ganesh Galaxy City, Ayodhya Bypass Road, Indus Park, Phase 2",
         "addressLocality": "Bhopal",
-        "addressRegion": "Madhya Pradesh",
+        "addressRegion": "Madhya Pradesh", 
         "postalCode": "462041",
         "addressCountry": "IN"
       },
       "geo": {
         "@type": "GeoCoordinates",
-        "latitude": "23.2599",
-        "longitude": "77.4126"
+        "latitude": "23.25988",
+        "longitude": "77.41569"
       },
       "openingHoursSpecification": [
         {
@@ -72,86 +65,124 @@
           "closes": "21:00"
         },
         {
-          "@type": "OpeningHoursSpecification",
+          "@type": "OpeningHoursSpecification", 
           "dayOfWeek": "Sunday",
           "opens": "07:30",
           "closes": "13:00"
         }
       ],
-      "serviceArea": {
-        "@type": "City",
-        "name": "Bhopal",
-        "addressRegion": "Madhya Pradesh"
-      },
-      "medicalSpecialty": [
-        "Pathology and Diagnostic Tests",
-        "Home Sample Collection",
-        "Home Nursing Care", 
-        "Physiotherapy at Home",
-        "Medical Equipment Rental",
-        "Teleconsultation"
-      ],
-      "availableService": [
+      "areaServed": [
         {
-          "@type": "MedicalTest",
-          "name": "Pathology and Diagnostic Tests",
-          "description": "Comprehensive pathology lab services with accurate diagnostic testing"
-        },
-        {
-          "@type": "MedicalTest",
-          "name": "Home Sample Collection",
-          "description": "Professional sample collection at your home for various diagnostic tests"
-        },
-        {
-          "@type": "MedicalTherapy",
-          "name": "Home Nursing Care",
-          "description": "Qualified nursing care services provided at your home"
-        },
-        {
-          "@type": "MedicalTherapy",
-          "name": "Physiotherapy at Home",
-          "description": "Professional physiotherapy treatment in the comfort of your home"
-        },
-        {
-          "@type": "Service",
-          "name": "Medical Equipment Rental",
-          "description": "Rental of essential medical equipment for home care"
-        },
-        {
-          "@type": "MedicalProcedure",
-          "name": "Teleconsultation",
-          "description": "Remote medical consultation services via video call"
+          "@type": "City",
+          "name": "Bhopal",
+          "containedInPlace": {
+            "@type": "State",
+            "name": "Madhya Pradesh",
+            "containedInPlace": {
+              "@type": "Country", 
+              "name": "India"
+            }
+          }
         }
       ],
-      "priceRange": "₹₹",
+      "serviceArea": {
+        "@type": "GeoCircle",
+        "geoMidpoint": {
+          "@type": "GeoCoordinates",
+          "latitude": "23.25988",
+          "longitude": "77.41569"
+        },
+        "geoRadius": "25000"
+      },
+      "medicalSpecialty": [
+        "Pathology",
+        "Laboratory Medicine", 
+        "Diagnostic Services",
+        "Home Healthcare",
+        "Nursing Care",
+        "Physiotherapy",
+        "Teleconsultation"
+      ],
       "hasOfferCatalog": {
         "@type": "OfferCatalog",
-        "name": "Healthcare Packages",
+        "name": "Healthcare Services",
         "itemListElement": [
           {
             "@type": "Offer",
             "itemOffered": {
-              "@type": "Service",
-              "name": "Home Wellness Check",
-              "description": "Comprehensive health check at home"
-            },
-            "price": "1299",
-            "priceCurrency": "INR"
+              "@type": "MedicalTest",
+              "name": "Blood Tests Package",
+              "description": "Complete Blood Count (CBC), Lipid Profile, Liver Function Test, Kidney Function Test with home collection",
+              "offers": {
+                "@type": "Offer",
+                "price": "200",
+                "priceCurrency": "INR",
+                "priceSpecification": {
+                  "@type": "PriceSpecification",
+                  "price": "200",
+                  "priceCurrency": "INR",
+                  "valueAddedTaxIncluded": true
+                }
+              }
+            }
           },
           {
             "@type": "Offer",
             "itemOffered": {
-              "@type": "Service",
-              "name": "Complete Home Care Package",
-              "description": "Complete healthcare package for home"
-            },
-            "price": "2999",
-            "priceCurrency": "INR"
+              "@type": "MedicalService",
+              "name": "Home Sample Collection",
+              "description": "Professional phlebotomist visits your home for blood sample collection with safety protocols"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "MedicalService",
+              "name": "Home Nursing Care",
+              "description": "Qualified nurses provide post-operative care, injections, wound dressing, and elderly care at home"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "MedicalService",
+              "name": "Physiotherapy at Home",
+              "description": "Professional physiotherapy services for rehabilitation, joint pain, and mobility improvement"
+            }
           }
         ]
-      }
+      },
+      "availableService": [
+        {
+          "@type": "MedicalTest",
+          "name": "Diagnostic Blood Tests",
+          "description": "CBC, Sugar Tests, Lipid Profile, Liver Function, Kidney Function, Thyroid Profile"
+        },
+        {
+          "@type": "MedicalTest", 
+          "name": "Specialized Tests",
+          "description": "HbA1c, Vitamin D, Vitamin B12, Cardiac Markers, Tumor Markers"
+        },
+        {
+          "@type": "MedicalTest",
+          "name": "Infection Screening",
+          "description": "COVID-19 RT-PCR, Dengue, Malaria, Typhoid, Hepatitis Profile"
+        },
+        {
+          "@type": "MedicalService",
+          "name": "Home Healthcare Services",
+          "description": "Sample collection, nursing care, physiotherapy, medical equipment rental"
+        }
+      ],
+      "founder": {
+        "@type": "Person",
+        "name": "Sankalp Healthcare Team"
+      },
+      "numberOfEmployees": "10-50",
+      "foundingDate": "2019",
+      "slogan": "Professional healthcare services at your doorstep"
     }
-    </script>
+  </script>
   </head>
 
   <body>

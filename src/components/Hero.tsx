@@ -17,26 +17,26 @@ const Hero = () => {
   };
 
   return (
-    <section id="home" className="py-12 sm:py-16 lg:py-24 bg-gradient-to-br from-surface to-background">
+    <section id="home" className="py-12 sm:py-16 lg:py-24 bg-gradient-to-br from-surface to-background" aria-labelledby="hero-heading">
       <div className="container mx-auto px-4 sm:px-6">
         <div className="grid lg:grid-cols-2 gap-8 sm:gap-12 items-center">
           {/* Left Column - Content */}
           <div className="space-y-6 sm:space-y-8 text-center lg:text-left">
             <div className="space-y-4 sm:space-y-6">
-              <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-foreground leading-tight">
+              <h1 id="hero-heading" className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-foreground leading-tight">
                 Home Healthcare Services Bhopal –{" "}
                 <span className="bg-gradient-primary bg-clip-text text-transparent">
                   Sankalp Pathology Lab
                 </span>
               </h1>
-              <p className="text-base sm:text-lg lg:text-xl text-foreground-secondary max-w-xl mx-auto lg:mx-0">
-                Professional healthcare services at your doorstep | स्वास्थ्य सेवा घर पर
+              <p className="text-base sm:text-lg lg:text-xl text-foreground-secondary max-w-xl mx-auto lg:mx-0" role="description">
+                Professional healthcare services at your doorstep. Comprehensive pathology tests, home sample collection, nursing care, physiotherapy, and teleconsultation services in Bhopal, Madhya Pradesh. | स्वास्थ्य सेवा घर पर - पूर्ण स्वास्थ्य जांच और देखभाल सेवाएं
               </p>
             </div>
 
             {/* Contact Info Card */}
-            <Card className="p-4 sm:p-6 bg-surface-elevated shadow-md">
-              <h3 className="font-semibold text-base sm:text-lg text-foreground mb-4">Visit Our Lab</h3>
+            <Card className="p-4 sm:p-6 bg-surface-elevated shadow-md" role="complementary" aria-labelledby="lab-info">
+              <h2 id="lab-info" className="font-semibold text-base sm:text-lg text-foreground mb-4">Visit Our Lab</h2>
               <div className="space-y-3">
                 <div className="flex items-start space-x-3">
                   <MapPin className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
@@ -98,8 +98,10 @@ const Hero = () => {
             <div className="relative rounded-lg sm:rounded-xl overflow-hidden shadow-lg sm:shadow-xl">
               <img 
                 src={heroImage} 
-                alt="Modern pathology laboratory with advanced diagnostic equipment"
+                alt="Modern pathology laboratory interior showing advanced diagnostic equipment, clean testing environment, and professional healthcare setup at Sankalp Pathology Lab in Bhopal. State-of-the-art medical devices for blood tests, sample analysis, and comprehensive health diagnostics."
                 className="w-full h-[250px] sm:h-[300px] md:h-[400px] lg:h-[500px] object-cover"
+                loading="eager"
+                fetchPriority="high"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
               
