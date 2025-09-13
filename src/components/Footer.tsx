@@ -158,9 +158,12 @@ const Footer = () => {
             </div>
           </div>
           <div className="mt-4 pt-4 border-t border-white/10 text-center">
-            <p className="text-white/60 text-xs">
-              Website design by <span className="text-white/80 font-medium">Aarna Sharma</span> - <span className="text-white/70">7974496150</span>
-            </p>
+            <button 
+              onClick={() => window.open('/adkaro-agency.html', '_blank')}
+              className="text-white/60 text-xs hover:text-white/80 transition-colors underline-offset-4 hover:underline"
+            >
+              Design By Adkaro advertising Agency
+            </button>
           </div>
         </div>
       </div>
