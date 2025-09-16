@@ -66,7 +66,8 @@ const Hero = () => {
             <div className="flex flex-col sm:flex-row flex-wrap gap-3 sm:gap-4 justify-center lg:justify-start">
               <Button 
                 size="lg" 
-                className="bg-secondary hover:bg-secondary-hover text-secondary-foreground px-6 sm:px-8 touch-button w-full sm:w-auto"
+                variant="cta"
+                className="px-6 sm:px-8 touch-button w-full sm:w-auto"
                 onClick={scrollToBooking}
               >
                 <Calendar className="w-4 sm:w-5 h-4 sm:h-5 mr-2" />

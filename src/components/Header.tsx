@@ -91,7 +91,8 @@ const Header = () => {
             <div className="hidden md:flex items-center space-x-3">
               <ThemeToggle />
               <Button 
-                className="bg-secondary hover:bg-secondary-hover text-secondary-foreground cta-button pulse-button relative font-semibold tracking-wide"
+                variant="cta"
+                className="cta-button pulse-button relative font-semibold tracking-wide"
                 onClick={() => scrollToSection("booking")}
               >
                 <Calendar className="w-4 h-4 mr-2" />

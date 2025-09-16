@@ -303,8 +303,9 @@ const BookingForm = () => {
                     <Button
                       type="submit"
                       size="lg"
+                      variant="cta"
                       disabled={isSubmitting}
-                      className="w-full bg-secondary hover:bg-secondary-hover text-secondary-foreground touch-button"
+                      className="w-full touch-button"
                     >
                     {isSubmitting ? (
                       <>
