@@ -3,14 +3,8 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "scripts": {
-    "dev": "vite",
-    "build:dev": "vite build --mode development",
-    "lint": "eslint .",
-    "preview": "vite preview"
-    "build": "webpack --config webpack.config.js",
-    "start": "wrangler dev"
-
+ "scripts": {
+    "build": "webpack --config webpack.config.js"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.10.0",
