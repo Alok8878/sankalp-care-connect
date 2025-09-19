@@ -5,12 +5,11 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-  
     "build:dev": "vite build --mode development",
     "lint": "eslint .",
     "preview": "vite preview"
-  "build": "webpack --config webpack.config.js",
-  "start": "wrangler dev"
+    "build": "webpack --config webpack.config.js",
+    "start": "wrangler dev"
 
   },
   "dependencies": {
